@@ -1,0 +1,10 @@
+{
+  "name": "nodesequencer",
+  "version" : "0.0.1",
+  "dependencies": {
+    "microtime" : ">=0.1",
+    "midi" : ">=0.4",
+    "socket.io" : ">=0.8"
+  },
+  "engine": "node 0.4.1"
+}
