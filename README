@@ -1,1 +1,3 @@
 Arduino based hardware talking to a midi-sequencer written in node.js 
+
+software uses node, socket.io, node-midi, node-microtime, processing
