@@ -1,0 +1,24 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect('http://localhost:1200');
+  socket.on('news', function (data) {
+    console.log(data);
+    socket.emit('my other event', { my: 'data' });
+  });
+  socket.on('step', function (data) {
+	var s = Math.floor(data.step) % 16;
+	document.getElementById('steplabel').innerHTML = s.toString();
+  });
+
+  function bpm(delta){
+    socket.emit('bpm', { bpmdelta: delta });
+}
+
+setInterval(function(){
+	socket.emit('getstep',{});
+},500);
+
+</script>
+<a href="javascript:bpm(-1);">BPM DOWN</a>
+<a href="javascript:bpm(1);">BPM UP</a>
+<span id="steplabel"></span>
