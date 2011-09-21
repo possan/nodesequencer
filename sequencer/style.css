@@ -1,0 +1,179 @@
+body {
+	margin: 20px; 
+	font: 10pt Helvetica, Arial;
+	background-color: #000;
+	color: #fff;
+}
+
+a { 
+	color: #ff0; 
+	text-decoration: none; 
+}
+
+div.lcd {
+	display: inline-block;
+	background-color: #263;
+	color: #5f6;
+	font: 12pt monospace;
+}
+
+.bigpad, .smallpad, .button {
+	display: block;
+	background-color: #666;
+}
+
+.bigpad:hover, .smallpad:hover, .button:hover { background-color: #888; }
+.bigpad:active, .smallpad:active, .button:active { background-color: #555; }
+
+.bigpad { width: 60px; height: 60px; }
+.button { width: 30px; height: 30px; }
+		
+.led {
+	width: 30px;
+	height: 15px;
+	background-color: #400;
+	color: #f88;
+}
+
+.led.green {
+	background-color: #050;
+	color: #8f8;
+}
+
+.led.green.on {
+	background-color: #0f0;
+	color: #fff;
+}
+
+.led.on {
+	background-color: #f00;
+	color: #fff;
+}
+
+
+
+
+
+
+.beatregion {
+	position: absolute;
+	left: 400px;
+	top: 40px;
+}
+
+.beatregion .led {
+	position: absolute;
+	top: 0px;
+}
+
+.beatregion #led24 { left: 0px; }
+.beatregion #led25 { left: 50px; }
+.beatregion #led26 { left: 100px; }
+.beatregion #led27 { left: 150px; }
+
+
+
+
+
+
+
+.displayregion {
+	position: absolute;
+	left: 400px;
+	top: 80px;
+}
+
+.displayregion .lcd
+{
+	position: absolute;
+	left: 0px;
+	top: 60px;
+}
+
+.displayregion .led {
+	position: absolute;
+	top: 0px;
+}
+
+.displayregion .button {
+	position: absolute;
+	top: 20px;
+}
+
+.displayregion .knob {
+	position: absolute;
+	top: 150px;
+}
+
+.displayregion #led20 { left: 0px; }
+.displayregion #led21 { left: 50px; }
+.displayregion #led22 { left: 100px; }
+.displayregion #led23 { left: 150px; }
+
+.displayregion #button20 { left: 0px; }
+.displayregion #button21 { left: 50px; }
+.displayregion #button22 { left: 100px; }
+.displayregion #button23 { left: 150px; }
+
+.displayregion #knob0 { left: 0px; }
+.displayregion #knob1 { left: 50px; }
+.displayregion #knob2 { left: 100px; }
+.displayregion #knob3 { left: 150px; }
+
+
+
+
+
+
+.padregion {
+	position: absolute;
+	left: 40px;
+	top: 40px;
+}
+
+
+
+
+	
+.pads {
+	position: relative;
+}
+
+.pads .pad,
+.pads .bigpad,
+.pads .smallpad,
+.pads .led { position: absolute; }
+
+.pads .pc1 { left: 0px; }
+.pads .pc2 { left: 70px; }
+.pads .pc3 { left: 140px; }
+.pads .pc4 { left: 210px; }
+
+.pads .lr1 { top: 0px; }
+.pads .lr2 { top: 90px; }
+.pads .lr3 { top: 180px; }
+.pads .lr4 { top: 270px; }
+
+.pads .pr1 { top: 15px; }
+.pads .pr2 { top: 105px; }
+.pads .pr3 { top: 195px; }
+.pads .pr4 { top: 285px; }
+	
+
+
+
+.knob {
+	width: 30px;
+	height: 100px;
+	background-color: #ccc;
+}
+.knob .handle {
+	width: 30px;
+	height: 20px;
+	background-color: #66d;
+} 
+
+
+
+
+

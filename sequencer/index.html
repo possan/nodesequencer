@@ -1,24 +1,135 @@
+<html>
+<head>
+<script src="/jquery-1.6.4.min.js"></script>
 <script src="/socket.io/socket.io.js"></script>
 <script>
-  var socket = io.connect('http://localhost:1200');
-  socket.on('news', function (data) {
-    console.log(data);
-    socket.emit('my other event', { my: 'data' });
-  });
-  socket.on('step', function (data) {
-	var s = Math.floor(data.step) % 16;
-	document.getElementById('steplabel').innerHTML = s.toString();
-  });
 
-  function bpm(delta){
-    socket.emit('bpm', { bpmdelta: delta });
-}
+	$(document).ready( function() {
+		
+		console.log('connecting...');
+	
+		var socket = io.connect('http://localhost:1200');
+  		
+		socket.on('news', function (data) {
+    		console.log(data);
+    		socket.emit('my other event', { my: 'data' });
+  		});
 
-setInterval(function(){
+  		socket.on('step', function (data) {
+			var s = Math.floor(data.step) % 16;
+			$('#steplabel').html( s );
+  		});
+
+  		function bpm(delta) {
+    		socket.emit('bpm', { bpmdelta: delta });
+  		}
+
+		console.log('wire events...');
+		
+		$('.clickable').each(function(){
+			// console.log('wire up button',this);
+			$(this).bind('mousedown',function(){
+				console.log('button down',this.id);
+				socket.emit('deviceButtonDown',{button:parseInt(this.id.substring(6),10)});
+			});
+			
+			$(this).bind('mouseup',function(){
+				console.log('button up',this.id);
+				socket.emit('deviceButtonUp',{button:parseInt(this.id.substring(6),10)});
+			});
+
+			$(this).bind('click',function(){
+				console.log('button click',this.id);
+				socket.emit('deviceButtonClick',{button:parseInt(this.id.substring(6),10)});
+			});
+		});
+		
+  		socket.on('updateDevice', function (d) {
+			console.log( 'update device', d );
+			if( d.type == 'led'){
+				var el = $('#led'+d.led);
+				if( d.on )
+					el.addClass('on');
+				else
+					el.removeClass('on');
+			}
+			else if( d.type == 'lcd' ){
+				$('#lcd').html(d.content);
+			}
+  		});
+
+
+/*
+  setInterval(function(){
 	socket.emit('getstep',{});
-},500);
+  },100);
+*/
+
+	});
 
 </script>
-<a href="javascript:bpm(-1);">BPM DOWN</a>
-<a href="javascript:bpm(1);">BPM UP</a>
-<span id="steplabel"></span>
+<link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+	
+	<div class="beatregion">
+		<div id="led24" class="led green">L24</div>
+		<div id="led25" class="led">L25</div>
+		<div id="led26" class="led">L26</div>
+		<div id="led27" class="led">L27</div>
+	</div>
+	
+	<div class="displayregion">
+		<div id="lcd" class="lcd">01234567890123456789<br/>01234567890123456789<br/>01234567890123456789<br/>01234567890123456789</div>
+		<div id="button20" class="button clickable">B20</div>
+		<div id="button21" class="button clickable">B21</div>
+		<div id="button22" class="button clickable">B22</div>
+		<div id="button23" class="button clickable">B23</div>
+		<div id="led20" class="led on">L20</div>
+		<div id="led21" class="led">L21</div>
+		<div id="led22" class="led">L22</div>
+		<div id="led23" class="led">L23</div>
+		<div id="knob0" class="knob"></div>
+		<div id="knob1" class="knob"></div>
+		<div id="knob2" class="knob"></div>
+		<div id="knob3" class="knob"></div>
+	</div>
+	
+	<div class="padregion">
+		<div class="pads">
+			<div id="led0" class="led pc1 lr1"></div>
+			<div id="led1" class="led pc2 lr1"></div>
+			<div id="led2" class="led pc3 lr1"></div>
+			<div id="led3" class="led pc4 lr1"></div>
+			<div id="led4" class="led pc1 lr2"></div>
+			<div id="led5" class="led pc2 lr2"></div>
+			<div id="led6" class="led pc3 lr2"></div>
+			<div id="led7" class="led pc4 lr2"></div>
+			<div id="led8" class="led pc1 lr3"></div>
+			<div id="led9" class="led pc2 lr3"></div>
+			<div id="led10" class="led pc3 lr3"></div>
+			<div id="led11" class="led pc4 lr3"></div>
+			<div id="led12" class="led pc1 lr4"></div>
+			<div id="led13" class="led pc2 lr4"></div>
+			<div id="led14" class="led pc3 lr4"></div>
+			<div id="led15" class="led pc4 lr4"></div>
+			<div id="button0" class="bigpad clickable pc1 pr1">B0</div>
+			<div id="button1" class="bigpad clickable pc2 pr1">B1</div>
+			<div id="button2" class="bigpad clickable pc3 pr1">B2</div>
+			<div id="button3" class="bigpad clickable pc4 pr1">B3</div>
+			<div id="button4" class="bigpad clickable pc1 pr2">B4</div>
+			<div id="button5" class="bigpad clickable pc2 pr2">B5</div>
+			<div id="button6" class="bigpad clickable pc3 pr2">B6</div>
+			<div id="button7" class="bigpad clickable pc4 pr2">B7</div>
+			<div id="button8" class="bigpad clickable pc1 pr3">B8</div>
+			<div id="button9" class="bigpad clickable pc2 pr3">B9</div>
+			<div id="button10" class="bigpad clickable pc3 pr3">B10</div>
+			<div id="button11" class="bigpad clickable pc4 pr3">B11</div>
+			<div id="button12" class="bigpad clickable pc1 pr4">B12</div>
+			<div id="button13" class="bigpad clickable pc2 pr4">B13</div>
+			<div id="button14" class="bigpad clickable pc3 pr4">B14</div>
+			<div id="button15" class="bigpad clickable pc4 pr4">B15</div>
+		</div>
+	</div>
+</body>
+</html>
