@@ -2,73 +2,8 @@
 <head>
 <script src="/jquery-1.6.4.min.js"></script>
 <script src="/socket.io/socket.io.js"></script>
-<script>
-
-	$(document).ready( function() {
-		
-		console.log('connecting...');
-	
-		var socket = io.connect('http://localhost:1200');
-  		
-		socket.on('news', function (data) {
-    		console.log(data);
-    		socket.emit('my other event', { my: 'data' });
-  		});
-
-  		socket.on('step', function (data) {
-			var s = Math.floor(data.step) % 16;
-			$('#steplabel').html( s );
-  		});
-
-  		function bpm(delta) {
-    		socket.emit('bpm', { bpmdelta: delta });
-  		}
-
-		console.log('wire events...');
-		
-		$('.clickable').each(function(){
-			// console.log('wire up button',this);
-			$(this).bind('mousedown',function(){
-				console.log('button down',this.id);
-				socket.emit('deviceButtonDown',{button:parseInt(this.id.substring(6),10)});
-			});
-			
-			$(this).bind('mouseup',function(){
-				console.log('button up',this.id);
-				socket.emit('deviceButtonUp',{button:parseInt(this.id.substring(6),10)});
-			});
-
-			$(this).bind('click',function(){
-				console.log('button click',this.id);
-				socket.emit('deviceButtonClick',{button:parseInt(this.id.substring(6),10)});
-			});
-		});
-		
-  		socket.on('updateDevice', function (d) {
-			console.log( 'update device', d );
-			if( d.type == 'led'){
-				var el = $('#led'+d.led);
-				if( d.on )
-					el.addClass('on');
-				else
-					el.removeClass('on');
-			}
-			else if( d.type == 'lcd' ){
-				$('#lcd').html(d.content);
-			}
-  		});
-
-
-/*
-  setInterval(function(){
-	socket.emit('getstep',{});
-  },100);
-*/
-
-	});
-
-</script>
-<link rel="stylesheet" href="/style.css"/>
+<script src="/index.js"></script>
+<link rel="stylesheet" href="/index.css"/>
 </head>
 <body>
 	

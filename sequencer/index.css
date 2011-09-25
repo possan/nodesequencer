@@ -16,6 +16,10 @@ div.lcd {
 	color: #5f6;
 	font: 12pt monospace;
 }
+	
+div.lcd  i {		
+	color: #395;
+}
 
 .bigpad, .smallpad, .button {
 	display: block;
