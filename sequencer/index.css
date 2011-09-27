@@ -12,7 +12,7 @@ a {
 
 div.lcd {
 	display: inline-block;
-	background-color: #263;
+	background-color: #142;
 	color: #5f6;
 	font: 12pt monospace;
 }
@@ -146,7 +146,7 @@ div.lcd  i {
 .pads .pad,
 .pads .bigpad,
 .pads .smallpad,
-.pads .led { position: absolute; }
+.pads .led { position: absolute; width: 60px; }
 
 .pads .pc1 { left: 0px; }
 .pads .pc2 { left: 70px; }

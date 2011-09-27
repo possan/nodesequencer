@@ -2,8 +2,10 @@
 $(document).ready( function() {
 	
 	console.log('connecting...');
+	
+	console.log(location);
 
-	var socket = io.connect('http://localhost:1200');
+	var socket = io.connect('http://'+location.host);
 	
 	socket.on('news', function (data) {
 		console.log(data);
@@ -23,19 +25,41 @@ $(document).ready( function() {
 	
 	$('.clickable').each(function(){
 		// console.log('wire up button',this);
+		/*
 		$(this).bind('mousedown',function(){
-			console.log('button down',this.id);
+			// console.log('button down',this.id);
 			socket.emit('deviceButtonDown',{button:parseInt(this.id.substring(6),10)});
 		});
 		
 		$(this).bind('mouseup',function(){
-			console.log('button up',this.id);
+			// console.log('button up',this.id);
 			socket.emit('deviceButtonUp',{button:parseInt(this.id.substring(6),10)});
 		});
-
-		$(this).bind('click',function(){
-			console.log('button click',this.id);
+		*/
+		$(this).bind('click',function(event){
+			// console.log('button click',this.id);
 			socket.emit('deviceButtonClick',{button:parseInt(this.id.substring(6),10)});
+			event.stopPropagation();
+		});
+		
+		var lasttouchdown = 0;
+		
+		$(this).bind('touchstart',function(event){
+			// console.log('button click',this.id);
+			socket.emit('deviceButtonClick',{button:parseInt(this.id.substring(6),10)});
+			event.stopPropagation();
+		});
+
+		$(this).bind('touchend',function(event){
+			event.stopPropagation();
+		});
+
+		$(this).bind('touchcancel',function(event){
+			event.stopPropagation();
+		});
+
+		$(document).bind('touchstart',function(event){
+			event.stopPropagation();
 		});
 	});
 	
@@ -58,7 +82,7 @@ $(document).ready( function() {
 			if( v < 0 )
 				socket.emit( 'deviceButtonClick', { button: 30+2*knobid+1 } );
 			else if( v>0 )
-				socket.emit('deviceButtonClick', { button: 30+2*knobid } );
+				socket.emit( 'deviceButtonClick', { button: 30+2*knobid } );
 			
 			console.log('knob turn',self.id, v );
 			socket.emit('deviceKnobTurn',{knob:knobid, delta:v});

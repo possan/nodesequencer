@@ -102,6 +102,10 @@ exports.Pattern = function() {
 		},
 		
 		isEmpty: function(){
+			if( this.start != 0 || this.end != 15 )
+				return false;
+			if( this.enabled == false )
+				return false;
 			for( var j=0; j<16; j++ )
 				if( !_steps[j].isEmpty() )
 				 	return false;

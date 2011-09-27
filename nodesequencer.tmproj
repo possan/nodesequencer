@@ -3,149 +3,98 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>sequencer/player.js</string>
+	<string>sequencer/index.css</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>sequencer/app.js</string>
 			<key>lastUsed</key>
-			<date>2011-09-21T23:51:35Z</date>
+			<date>2011-09-25T23:56:54Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>sequencer/socketdevicecontroller.js</string>
+			<key>lastUsed</key>
+			<date>2011-09-25T23:07:12Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>sequencer/devicecontroller.js</string>
 			<key>lastUsed</key>
-			<date>2011-09-21T23:50:39Z</date>
+			<date>2011-09-25T23:56:54Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>sequencer/player.js</string>
 			<key>lastUsed</key>
-			<date>2011-09-21T23:51:35Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2011-09-25T23:56:54Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>sequencer/song.js</string>
+			<key>lastUsed</key>
+			<date>2011-09-25T23:56:54Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>sequencer/track.js</string>
+			<key>lastUsed</key>
+			<date>2011-09-25T23:56:53Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>sequencer/sequencer.js</string>
 			<key>lastUsed</key>
-			<date>2011-09-21T23:46:44Z</date>
+			<date>2011-09-25T23:56:53Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>sequencer/style.css</string>
+			<string>sequencer/index.css</string>
 			<key>lastUsed</key>
-			<date>2011-09-21T23:30:14Z</date>
+			<date>2011-09-25T23:56:54Z</date>
+			<key>selected</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>sequencer/index.js</string>
+			<key>lastUsed</key>
+			<date>2011-09-25T23:56:54Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>sequencer/index.html</string>
 			<key>lastUsed</key>
-			<date>2011-09-21T23:50:41Z</date>
+			<date>2011-09-25T21:57:16Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-		<key>sequencer/app.js</key>
+		<key>sequencer/index.css</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1</integer>
-				<key>line</key>
-				<integer>122</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>sequencer/devicecontroller.js</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>31</integer>
-				<key>line</key>
-				<integer>30</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>32</integer>
-		</dict>
-		<key>sequencer/index.html</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>7</integer>
-				<key>line</key>
-				<integer>132</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>56</integer>
-		</dict>
-		<key>sequencer/player.js</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>19</integer>
-				<key>line</key>
 				<integer>11</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>sequencer/sequencer.js</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>7</integer>
 				<key>line</key>
-				<integer>43</integer>
+				<integer>20</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>16</integer>
-		</dict>
-		<key>sequencer/style.css</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>38</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
 			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>26</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>sequencer/index.html</string>
-		<string>sequencer/app.js</string>
-		<string>sequencer/player.js</string>
-		<string>sequencer/devicecontroller.js</string>
-		<string>sequencer/sequencer.js</string>
-		<string>sequencer/style.css</string>
+		<string>sequencer/index.css</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{542, 174}, {1241, 1004}}</string>
+	<string>{{378, 174}, {1241, 1004}}</string>
 </dict>
 </plist>

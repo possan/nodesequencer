@@ -39,6 +39,8 @@ exports.Sequencer = function( opts ) {
 	
 	return {
 		
+		player: null,
+		
 		getSong: function() {
 			return _song;
 		},
@@ -108,14 +110,6 @@ exports.Sequencer = function( opts ) {
 			this.removeOldNotes();
 			
 			var ppqnstep = _step % _ppqn;
-			var rsp = Math.floor( arg.step / arg.ppqn );
-			
-			// console.log('sequencer step: ', _step, rsp );
-			
-			for( var j=0; j<16; j++ ){
-		//		var t = _song.getTrack( j );
-		//		var s = t.getStep( rsp );
-			}
 			
 			if( ppqnstep == 0 ) {
 				// time to step everything forward
@@ -123,21 +117,28 @@ exports.Sequencer = function( opts ) {
 				// console.log('step seq', rsp);
 				
 				// se till att pattern är rätt 
-				for( var j=0; j<2; j++ ) {
+				for( var j=0; j<16; j++ ) {
 
 					var trk = _tracks[ j ];
-					var strk = _song.getTrack( j);
+					var strk = _song.getTrack( j );
 
 					if( trk.currentPattern != -1 ) {
 						var p = strk.getPattern(trk.currentPattern);
 						
 						trk.currentStep ++;
 						if( trk.currentStep > p.end ) {
-							// ska vi byta pattern ?
-							trk.currentStep = p.start;
+							
+							trk.currentPattern = strk.getNextEnabledPattern( trk.currentPattern );
+							console.log('changed to next pattern',trk.currentPattern,'on track',j);
+							if( trk.currentPattern != -1 ){
+								p = strk.getPattern(trk.currentPattern);
+								// ska vi byta pattern ?
+								if( p != null )
+									trk.currentStep = p.start;
+							}
 						}
 						
-						if( trk.currentStep >= 0 )	
+						if( trk.currentPattern >= 0 && trk.currentStep >= 0 && strk.enabled )
 							this.queueEvents( j, trk.currentPattern, trk.currentStep );
 						
 					} else {
@@ -145,6 +146,7 @@ exports.Sequencer = function( opts ) {
 						// ingen nuvarande pattern, ska vi starta en?
 						// starta patterns görs endast på första 4/4-takten
 						
+						var rsp = Math.floor( arg.step / arg.ppqn ) % 16;
 						if( rsp == 0 ) {
 							trk.currentPattern = strk.getNextEnabledPattern(-1);
 							console.log('enabling pattern '+trk.currentPattern+' on track '+j);
@@ -158,33 +160,9 @@ exports.Sequencer = function( opts ) {
 							this.queueEvents( j, trk.currentPattern, trk.currentStep );
 					}
 				}		
-				
-				
-				
-				
-						
 			}
 
 			_step ++;
-
-			/*
-			if( ppqnstep == 0 ) {
-
-			//	console.log('step',rsp,'at tick', t);	
-			 	if (rsp % 4 == 0 ) this.queueNote( 0, 36, 100, 1 );				
-				if (rsp % 10 == 0 ) this.queueNote( 0, 42, 100, 1 );
-				if (rsp % 15 == 0 ) this.queueNote( 0, 43, 100, 1 );
-				if (rsp % 30 == 0 ) this.queueNote( 0,45, 100, 1 );
-				if (rsp % 11 == 0 ) this.queueNote( 0, 46, 100, 1 );
-				if (rsp % 5 == 0 ) this.queueNote( 0, 40, 100, 1 );
-				if (rsp % 3 == 0 ) this.queueNote( 0, 45, 100, 1 );
-				if (rsp % 2 == 0 ) this.queueNote( 0, 43, 100, 1 );
-
-			 	if( rsp % 4 == 0 ) this.queueNote( 1, 36, 100, 0.5 );
-			 	if( rsp % 4 == 2 ) this.queueNote( 1, 48, 100, 0.5 ); 
-				if( rsp % 4 == 3 )this.queueNote( 1, 48, 100, 0.5 );
-			}
-			*/
 		}
 	}
 	

@@ -67,14 +67,25 @@ function handler (req, res) {
 	}
 }
 
+console.log('set up webserver...');
 var app = httpmodule.createServer(handler);
+// app.listen(81);
+
+console.log('set up ws-server...');
 var io = socketiomodule.listen(app);
 io.set('log level', 2);
 io.sockets.on('connection', function (socket) {
-	var dc = new socketdevicecontrollermodule.SocketDeviceController({ sequencer: seq, socket: socket });
-	setInterval( function() {
-		dc.update();
-	}, 30 );
+	console.log('new connection',socket.id);
+	var sock = socket;
+	(function(){
+		var dc = new socketdevicecontrollermodule.SocketDeviceController({ sequencer: seq, socket: sock });
+		var timer = setInterval( function() { dc.update(); }, 30 );
+		sock.on('disconnect', function () {
+			console.log('disconnect.');
+    		// sockets.emit('user disconnected');
+			clearTimeout(timer);
+  		});
+	})();
 });
 
 
@@ -85,12 +96,12 @@ io.sockets.on('connection', function (socket) {
 console.log('loading last saved song.');
 
 doSave = function() {
-	console.log('Auto-saving song...');
+	// console.log('Auto-saving song...');
 	var json = song.toJson();
 	var str = JSON.stringify(json,null,'\t');
 	fs.writeFile('lastsong.json', str, function (err) {
 	  if (err) throw err;
-	  // console.log('It\'s saved!');
+	  console.log('Auto-saved song.');
 	});
 }
 
@@ -124,12 +135,10 @@ setInterval(function() { doSave(); },10000);
 // Set up sequence player
 // 
 
-var player = playermodule.Player( { ppqn: 48, callback: function(arg){
-	seq.step(arg);
-} } );
+seq.player = playermodule.Player( { ppqn: 48, callback: function(arg) { seq.step(arg); } } );
 
 console.log('starting playback.');
-player.startTimer();
+seq.player.startTimer();
 
 console.log( 'App initialized, listening for connections ... ' ); 
 app.listen(1200);
