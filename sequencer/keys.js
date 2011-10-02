@@ -1,0 +1,22 @@
+exports.Keys = {
+	
+	PAD0: 0,
+	PAD15: 15,
+	
+	MODE0: 20,
+	MODE1: 21,
+	MODE2: 22,
+	MODE3: 23,
+	
+	KNOB1_UP: 30,
+	KNOB1_DN: 31,
+	KNOB2_UP: 32,
+	KNOB2_DN: 33,
+	KNOB3_UP: 34,
+	KNOB3_DN: 35,
+	KNOB4_UP: 36,
+	KNOB4_DN: 37
+	
+};
+
+

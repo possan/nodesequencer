@@ -115,6 +115,12 @@ exports.Sequencer = function( opts ) {
 				// time to step everything forward
 				
 				// console.log('step seq', rsp);
+
+				var rsp = Math.floor( arg.step / arg.ppqn ) % 16;
+				var rsp2 = Math.floor( arg.step / arg.ppqn ) % 256;
+				if( rsp2 == 0 ){
+					console.log('Resync all loops.');
+				}
 				
 				// se till att pattern är rätt 
 				for( var j=0; j<16; j++ ) {
@@ -125,28 +131,31 @@ exports.Sequencer = function( opts ) {
 					if( trk.currentPattern != -1 ) {
 						var p = strk.getPattern(trk.currentPattern);
 						
-						trk.currentStep ++;
+						if( rsp2 == 0 ) {
+							trk.currentStep = p.start;
+						}
+							
 						if( trk.currentStep > p.end ) {
 							
 							trk.currentPattern = strk.getNextEnabledPattern( trk.currentPattern );
 							console.log('changed to next pattern',trk.currentPattern,'on track',j);
 							if( trk.currentPattern != -1 ){
 								p = strk.getPattern(trk.currentPattern);
-								// ska vi byta pattern ?
-								if( p != null )
-									trk.currentStep = p.start;
+								trk.currentStep = p.start;
 							}
 						}
 						
 						if( trk.currentPattern >= 0 && trk.currentStep >= 0 && strk.enabled )
 							this.queueEvents( j, trk.currentPattern, trk.currentStep );
 						
+						trk.currentStep ++;
+	
 					} else {
 						
 						// ingen nuvarande pattern, ska vi starta en?
 						// starta patterns görs endast på första 4/4-takten
 						
-						var rsp = Math.floor( arg.step / arg.ppqn ) % 16;
+						
 						if( rsp == 0 ) {
 							trk.currentPattern = strk.getNextEnabledPattern(-1);
 							console.log('enabling pattern '+trk.currentPattern+' on track '+j);
@@ -155,6 +164,7 @@ exports.Sequencer = function( opts ) {
 								trk.currentStep = p.start;
 							}
 						}
+						
 						
 						if( trk.currentStep >= 0 )
 							this.queueEvents( j, trk.currentPattern, trk.currentStep );
