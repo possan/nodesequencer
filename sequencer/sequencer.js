@@ -64,7 +64,7 @@ exports.Sequencer = function( opts ) {
 			_runningnotes.push( {
 				chan: chan,
 				note: note,
-				timer: Math.ceil(stepsdur * _ppqn / 4),
+				timer: Math.ceil(stepsdur * _ppqn),
 			} );
 		},
 		
@@ -102,7 +102,8 @@ exports.Sequencer = function( opts ) {
 				return;
 			// console.log('queue', snot);
 			for(var k=0; k<snot.length; k++ )
-				this.queueNote( strk.channel, snot[k].n, snot[k].v, 0.5 );
+				if( strk.gate > 0 )
+					this.queueNote( strk.channel, snot[k].n, snot[k].v, strk.gate/16 );
 		},
 		
 		step: function(arg) {
@@ -116,9 +117,11 @@ exports.Sequencer = function( opts ) {
 				
 				// console.log('step seq', rsp);
 
-				var rsp = Math.floor( arg.step / arg.ppqn ) % 16;
-				var rsp2 = Math.floor( arg.step / arg.ppqn ) % 256;
-				if( rsp2 == 0 ){
+				var stp = Math.floor( arg.step / arg.ppqn );
+				var rsp = stp % 16;
+				var rsp2 = stp % 128;
+				
+				if( rsp2 == 0 ) { 
 					console.log('Resync all loops.');
 				}
 				
@@ -138,7 +141,7 @@ exports.Sequencer = function( opts ) {
 						if( trk.currentStep > p.end ) {
 							
 							trk.currentPattern = strk.getNextEnabledPattern( trk.currentPattern );
-							console.log('changed to next pattern',trk.currentPattern,'on track',j);
+							// console.log('changed to next pattern',trk.currentPattern,'on track',j);
 							if( trk.currentPattern != -1 ){
 								p = strk.getPattern(trk.currentPattern);
 								trk.currentStep = p.start;
@@ -158,7 +161,7 @@ exports.Sequencer = function( opts ) {
 						
 						if( rsp == 0 ) {
 							trk.currentPattern = strk.getNextEnabledPattern(-1);
-							console.log('enabling pattern '+trk.currentPattern+' on track '+j);
+							// console.log('enabling pattern '+trk.currentPattern+' on track '+j);
 							if( trk.currentPattern != -1 ) {
 								var p = strk.getPattern(trk.currentPattern);
 								trk.currentStep = p.start;

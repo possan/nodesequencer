@@ -27,14 +27,14 @@ var DisplayBuffer = function( callback ) {
 		},
 			
 		sendUpdate: function() {
-			
+			/*
 			if( this.lcd != lastlcd ) {
 				// console.log('lcd changed to:', this.lcd);
 				_updateCallback( { type: 'lcd-clear' } );
 				_updateCallback( { type: 'lcd', content: this.lcd } );
 				lastlcd = this.lcd;
 			}
-			
+			*/
 			for( var i=0; i<50; i++ ) {
 				if( this.leds[i] != lastleds[i] ) {
 					// 	console.log('led '+i+' changed to '+this.leds[i]);
@@ -95,24 +95,24 @@ exports.DeviceController = function( opts ) {
 	screens["loop"] = new LoopScreen();
 
     var lastscreen = '';
-	fireUpdateDevice( { type: 'lcd-clear' } );
-	fireUpdateDevice( { type: 'lcd', content: 'Boot' } );
-	fireUpdateDevice( { type: 'lcd-xy', x:3, y:7, content: 'Boot' } );
  
 	var checkNextScreen = function() {
-		if( host.nextscreen != '' ){
-			if( host.nextscreen != lastscreen ) {
-				host.screen = host.nextscreen;
-				console.log('changing screen to',host.screen);
-				fireUpdateDevice( { type: 'lcd-clear' } );
-				screens[ host.screen ].activate( host );
-				host.subscreen = 0;
-				lastscreen = host.screen;
-			} else {
-				host.subscreen ++;
-			}
-			host.nextscreen = '';
+		if( host.nextscreen == '' )
+			return;
+		if( host.nextscreen != lastscreen ) {
+			host.screen = host.nextscreen;
+			console.log('changing screen to',host.screen);
+			fireUpdateDevice( { type: 'lcd-clear' } );
+			host.subscreen = 0;
+			screens[ host.screen ].activate( host );
+			screens[ host.screen ].update( host );
+			lastscreen = host.screen;
+		} else {
+			host.subscreen ++;
+			screens[ host.screen ].activate( host );
+			screens[ host.screen ].update( host );
 		}
+		host.nextscreen = '';
 	}	
 
 	return {		

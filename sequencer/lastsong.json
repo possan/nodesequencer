@@ -8,6 +8,12 @@
 					"end": 7,
 					"steps": [
 						{
+							"notes": [
+								{
+									"n": 36,
+									"v": 100
+								}
+							],
 							"step": 0
 						},
 						{
@@ -129,6 +135,10 @@
 								},
 								{
 									"n": 40,
+									"v": 100
+								},
+								{
+									"n": 36,
 									"v": 100
 								}
 							],
@@ -194,6 +204,10 @@
 								{
 									"n": 37,
 									"v": 100
+								},
+								{
+									"n": 36,
+									"v": 100
 								}
 							],
 							"step": 12
@@ -261,7 +275,7 @@
 					"pattern": 0
 				},
 				{
-					"enabled": true,
+					"enabled": false,
 					"start": 0,
 					"end": 15,
 					"steps": [
@@ -486,107 +500,163 @@
 					"end": 15,
 					"steps": [
 						{
+							"notes": [
+								{
+									"n": 36,
+									"v": 100
+								}
+							],
 							"step": 0
 						},
 						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
+							"notes": [
+								{
+									"n": 36,
+									"v": 100
+								}
+							],
 							"step": 4
 						},
 						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
+							"notes": [
+								{
+									"n": 36,
+									"v": 100
+								}
+							],
 							"step": 7
 						},
 						{
+							"notes": [
+								{
+									"n": 36,
+									"v": 100
+								}
+							],
 							"step": 8
 						},
 						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
+							"notes": [
+								{
+									"n": 30,
+									"v": 100
+								}
+							],
 							"step": 11
 						},
 						{
+							"notes": [
+								{
+									"n": 36,
+									"v": 100
+								}
+							],
 							"step": 12
 						},
 						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
+							"notes": [
+								{
+									"n": 36,
+									"v": 100
+								}
+							],
 							"step": 15
 						}
 					],
 					"pattern": 2
 				},
 				{
-					"enabled": false,
+					"enabled": true,
 					"start": 0,
 					"end": 15,
 					"steps": [
 						{
+							"notes": [
+								{
+									"n": 36,
+									"v": 100
+								}
+							],
 							"step": 0
 						},
 						{
-							"step": 1
-						},
-						{
+							"notes": [
+								{
+									"n": 43,
+									"v": 100
+								}
+							],
 							"step": 2
 						},
 						{
-							"step": 3
-						},
-						{
+							"notes": [
+								{
+									"n": 36,
+									"v": 100
+								},
+								{
+									"n": 37,
+									"v": 100
+								}
+							],
 							"step": 4
 						},
 						{
-							"step": 5
-						},
-						{
+							"notes": [
+								{
+									"n": 43,
+									"v": 100
+								}
+							],
 							"step": 6
 						},
 						{
-							"step": 7
-						},
-						{
+							"notes": [
+								{
+									"n": 36,
+									"v": 100
+								}
+							],
 							"step": 8
 						},
 						{
-							"step": 9
-						},
-						{
+							"notes": [
+								{
+									"n": 43,
+									"v": 100
+								}
+							],
 							"step": 10
 						},
 						{
-							"step": 11
-						},
-						{
+							"notes": [
+								{
+									"n": 36,
+									"v": 100
+								},
+								{
+									"n": 37,
+									"v": 100
+								}
+							],
 							"step": 12
 						},
 						{
-							"step": 13
-						},
-						{
+							"notes": [
+								{
+									"n": 43,
+									"v": 100
+								}
+							],
 							"step": 14
 						},
 						{
+							"notes": [
+								{
+									"n": 36,
+									"v": 100
+								}
+							],
 							"step": 15
 						}
 					],
@@ -598,52 +668,40 @@
 					"end": 15,
 					"steps": [
 						{
+							"notes": [
+								{
+									"n": 36,
+									"v": 100
+								}
+							],
 							"step": 0
 						},
 						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
+							"notes": [
+								{
+									"n": 36,
+									"v": 100
+								}
+							],
 							"step": 4
 						},
 						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
+							"notes": [
+								{
+									"n": 36,
+									"v": 100
+								}
+							],
 							"step": 8
 						},
 						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
+							"notes": [
+								{
+									"n": 36,
+									"v": 100
+								}
+							],
 							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
 						}
 					],
 					"pattern": 4
@@ -652,616 +710,77 @@
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 5
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 6
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 7
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 8
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 9
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 10
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 11
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 12
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 13
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 14
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 15
 				}
 			],
@@ -1269,6 +788,7 @@
 			"position": 0,
 			"channel": 0,
 			"type": "drum",
+			"gate": 7,
 			"track": 0
 		},
 		{
@@ -1318,6 +838,10 @@
 								{
 									"n": 49,
 									"v": 100
+								},
+								{
+									"n": 38,
+									"v": 100
 								}
 							],
 							"step": 3
@@ -1341,9 +865,12 @@
 							"step": 5
 						},
 						{
-							"step": 6
-						},
-						{
+							"notes": [
+								{
+									"n": 38,
+									"v": 100
+								}
+							],
 							"step": 7
 						},
 						{
@@ -1356,15 +883,6 @@
 							"step": 8
 						},
 						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
 							"notes": [
 								{
 									"n": 36,
@@ -1372,15 +890,6 @@
 								}
 							],
 							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
 						}
 					],
 					"pattern": 0
@@ -1389,847 +898,113 @@
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 1
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 2
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 3
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 4
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 5
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 6
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 7
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 8
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 9
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 10
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 11
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 12
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 13
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 14
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 15
 				}
 			],
-			"enabled": false,
+			"enabled": true,
 			"position": 0,
 			"channel": 1,
-			"type": "drum",
+			"type": "synth",
+			"gate": 5,
 			"track": 1
 		},
 		{
@@ -2240,12 +1015,6 @@
 					"end": 2,
 					"steps": [
 						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
 							"notes": [
 								{
 									"n": 48,
@@ -2253,12 +1022,6 @@
 								}
 							],
 							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
 						},
 						{
 							"notes": [
@@ -2274,9 +1037,6 @@
 							"step": 5
 						},
 						{
-							"step": 6
-						},
-						{
 							"notes": [
 								{
 									"n": 48,
@@ -2284,9 +1044,6 @@
 								}
 							],
 							"step": 7
-						},
-						{
-							"step": 8
 						},
 						{
 							"notes": [
@@ -2362,847 +1119,113 @@
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 1
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 2
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 3
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 4
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 5
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 6
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 7
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 8
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 9
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 10
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 11
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 12
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 13
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 14
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 15
 				}
 			],
-			"enabled": false,
+			"enabled": true,
 			"position": 0,
 			"channel": 2,
-			"type": "drum",
+			"type": "synth",
+			"gate": 2,
 			"track": 2
 		},
 		{
@@ -3222,9 +1245,6 @@
 							"step": 0
 						},
 						{
-							"step": 1
-						},
-						{
 							"notes": [
 								{
 									"n": 45,
@@ -3238,16 +1258,18 @@
 							"step": 2
 						},
 						{
+							"notes": [
+								{
+									"n": 37,
+									"v": 100
+								}
+							],
 							"step": 3
 						},
 						{
 							"notes": [
 								{
 									"n": 36,
-									"v": 100
-								},
-								{
-									"n": 37,
 									"v": 100
 								}
 							],
@@ -3272,6 +1294,12 @@
 							"step": 6
 						},
 						{
+							"notes": [
+								{
+									"n": 37,
+									"v": 100
+								}
+							],
 							"step": 7
 						},
 						{
@@ -3279,14 +1307,30 @@
 								{
 									"n": 36,
 									"v": 100
+								},
+								{
+									"n": 37,
+									"v": 100
 								}
 							],
 							"step": 8
 						},
 						{
+							"notes": [
+								{
+									"n": 37,
+									"v": 100
+								}
+							],
 							"step": 9
 						},
 						{
+							"notes": [
+								{
+									"n": 37,
+									"v": 100
+								}
+							],
 							"step": 10
 						},
 						{
@@ -3320,9 +1364,6 @@
 							"step": 12
 						},
 						{
-							"step": 13
-						},
-						{
 							"notes": [
 								{
 									"n": 40,
@@ -3330,9 +1371,6 @@
 								}
 							],
 							"step": 14
-						},
-						{
-							"step": 15
 						}
 					],
 					"pattern": 0
@@ -3341,392 +1379,49 @@
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 1
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 2
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 3
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 4
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 5
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 6
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 7
 				},
 				{
@@ -3735,52 +1430,13 @@
 					"end": 15,
 					"steps": [
 						{
+							"notes": [
+								{
+									"n": 37,
+									"v": 100
+								}
+							],
 							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
 						}
 					],
 					"pattern": 8
@@ -3789,399 +1445,57 @@
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 9
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 10
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 11
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 12
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 13
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 14
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 15
 				}
 			],
-			"enabled": false,
+			"enabled": true,
 			"position": 0,
 			"channel": 3,
 			"type": "drum",
+			"gate": 3,
 			"track": 3
 		},
 		{
@@ -4201,9 +1515,6 @@
 							"step": 0
 						},
 						{
-							"step": 1
-						},
-						{
 							"notes": [
 								{
 									"n": 39,
@@ -4335,9 +1646,6 @@
 							"step": 12
 						},
 						{
-							"step": 13
-						},
-						{
 							"notes": [
 								{
 									"n": 39,
@@ -4353,9 +1661,6 @@
 								}
 							],
 							"step": 14
-						},
-						{
-							"step": 15
 						}
 					],
 					"pattern": 0
@@ -4375,9 +1680,6 @@
 							"step": 0
 						},
 						{
-							"step": 1
-						},
-						{
 							"notes": [
 								{
 									"n": 39,
@@ -4385,9 +1687,6 @@
 								}
 							],
 							"step": 2
-						},
-						{
-							"step": 3
 						},
 						{
 							"notes": [
@@ -4399,9 +1698,6 @@
 							"step": 4
 						},
 						{
-							"step": 5
-						},
-						{
 							"notes": [
 								{
 									"n": 39,
@@ -4409,9 +1705,6 @@
 								}
 							],
 							"step": 6
-						},
-						{
-							"step": 7
 						},
 						{
 							"notes": [
@@ -4423,9 +1716,6 @@
 							"step": 8
 						},
 						{
-							"step": 9
-						},
-						{
 							"notes": [
 								{
 									"n": 39,
@@ -4435,9 +1725,6 @@
 							"step": 10
 						},
 						{
-							"step": 11
-						},
-						{
 							"notes": [
 								{
 									"n": 36,
@@ -4445,9 +1732,6 @@
 								}
 							],
 							"step": 12
-						},
-						{
-							"step": 13
 						},
 						{
 							"notes": [
@@ -4474,784 +1758,98 @@
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 2
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 3
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 4
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 5
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 6
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 7
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 8
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 9
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 10
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 11
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 12
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 13
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 14
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 15
 				}
 			],
@@ -5259,6 +1857,7 @@
 			"position": 0,
 			"channel": 4,
 			"type": "drum",
+			"gate": 5,
 			"track": 4
 		},
 		{
@@ -5278,9 +1877,6 @@
 							"step": 0
 						},
 						{
-							"step": 1
-						},
-						{
 							"notes": [
 								{
 									"n": 38,
@@ -5303,9 +1899,6 @@
 							"step": 3
 						},
 						{
-							"step": 4
-						},
-						{
 							"notes": [
 								{
 									"n": 45,
@@ -5319,9 +1912,6 @@
 							"step": 5
 						},
 						{
-							"step": 6
-						},
-						{
 							"notes": [
 								{
 									"n": 37,
@@ -5333,9 +1923,6 @@
 								}
 							],
 							"step": 7
-						},
-						{
-							"step": 8
 						},
 						{
 							"notes": [
@@ -5417,12 +2004,6 @@
 					"end": 15,
 					"steps": [
 						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
 							"notes": [
 								{
 									"n": 36,
@@ -5430,45 +2011,6 @@
 								}
 							],
 							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
 						}
 					],
 					"pattern": 1
@@ -5477,784 +2019,98 @@
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 2
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 3
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 4
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 5
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 6
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 7
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 8
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 9
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 10
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 11
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 12
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 13
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 14
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 15
 				}
 			],
@@ -6262,6 +2118,7 @@
 			"position": 0,
 			"channel": 5,
 			"type": "drum",
+			"gate": 4,
 			"track": 5
 		},
 		{
@@ -6273,847 +2130,113 @@
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 1
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 2
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 3
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 4
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 5
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 6
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 7
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 8
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 9
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 10
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 11
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 12
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 13
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 14
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 15
 				}
 			],
-			"enabled": false,
+			"enabled": true,
 			"position": 0,
 			"channel": 6,
 			"type": "drum",
+			"gate": 4,
 			"track": 6
 		},
 		{
@@ -7133,9 +2256,6 @@
 							"step": 0
 						},
 						{
-							"step": 1
-						},
-						{
 							"notes": [
 								{
 									"n": 36,
@@ -7161,39 +2281,6 @@
 								}
 							],
 							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
 						}
 					],
 					"pattern": 0
@@ -7202,904 +2289,263 @@
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 1
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 2
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 3
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 4
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 5
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 6
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 7
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 8
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 9
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 10
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 11
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 12
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 13
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 14
 				},
 				{
 					"enabled": false,
 					"start": 0,
 					"end": 15,
-					"steps": [
-						{
-							"step": 0
-						},
-						{
-							"step": 1
-						},
-						{
-							"step": 2
-						},
-						{
-							"step": 3
-						},
-						{
-							"step": 4
-						},
-						{
-							"step": 5
-						},
-						{
-							"step": 6
-						},
-						{
-							"step": 7
-						},
-						{
-							"step": 8
-						},
-						{
-							"step": 9
-						},
-						{
-							"step": 10
-						},
-						{
-							"step": 11
-						},
-						{
-							"step": 12
-						},
-						{
-							"step": 13
-						},
-						{
-							"step": 14
-						},
-						{
-							"step": 15
-						}
-					],
+					"steps": [],
 					"pattern": 15
 				}
 			],
-			"enabled": false,
+			"enabled": true,
 			"position": 0,
 			"channel": 7,
-			"type": "drum",
+			"type": "synth",
+			"gate": 4,
 			"track": 7
 		},
 		{
 			"patterns": [
 				{
+					"enabled": true,
+					"start": 0,
+					"end": 9,
+					"steps": [
+						{
+							"notes": [
+								{
+									"n": 24,
+									"v": 100
+								}
+							],
+							"step": 0
+						},
+						{
+							"notes": [
+								{
+									"n": 30,
+									"v": 100
+								}
+							],
+							"step": 1
+						},
+						{
+							"notes": [
+								{
+									"n": 29,
+									"v": 100
+								}
+							],
+							"step": 2
+						}
+					],
 					"pattern": 0
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 1
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 2
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 3
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 4
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 5
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 6
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 7
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 8
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 9
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 10
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 11
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 12
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 13
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 14
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 15
 				}
 			],
-			"enabled": false,
+			"enabled": true,
 			"position": 0,
 			"channel": 8,
-			"type": "drum",
+			"type": "synth",
+			"gate": 10,
 			"track": 8
 		},
 		{
@@ -8108,55 +2554,116 @@
 					"pattern": 0
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 1
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 2
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 3
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 4
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 5
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 6
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 7
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 8
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 9
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 10
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 11
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 12
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 13
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 14
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 15
 				}
 			],
-			"enabled": false,
+			"enabled": true,
 			"position": 0,
 			"channel": 9,
-			"type": "drum",
+			"type": "synth",
+			"gate": 4,
 			"track": 9
 		},
 		{
@@ -8165,55 +2672,116 @@
 					"pattern": 0
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 1
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 2
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 3
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 4
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 5
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 6
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 7
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 8
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 9
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 10
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 11
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 12
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 13
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 14
 				},
 				{
+					"enabled": false,
+					"start": 0,
+					"end": 15,
+					"steps": [],
 					"pattern": 15
 				}
 			],
-			"enabled": false,
+			"enabled": true,
 			"position": 0,
 			"channel": 10,
 			"type": "synth",
+			"gate": 4,
 			"track": 10
 		},
 		{
@@ -8267,10 +2835,11 @@
 					"pattern": 15
 				}
 			],
-			"enabled": false,
+			"enabled": true,
 			"position": 0,
 			"channel": 11,
 			"type": "synth",
+			"gate": 4,
 			"track": 11
 		},
 		{
@@ -8328,6 +2897,7 @@
 			"position": 0,
 			"channel": 12,
 			"type": "synth",
+			"gate": 4,
 			"track": 12
 		},
 		{
@@ -8381,10 +2951,11 @@
 					"pattern": 15
 				}
 			],
-			"enabled": false,
+			"enabled": true,
 			"position": 0,
 			"channel": 13,
 			"type": "synth",
+			"gate": 4,
 			"track": 13
 		},
 		{
@@ -8438,10 +3009,11 @@
 					"pattern": 15
 				}
 			],
-			"enabled": false,
+			"enabled": true,
 			"position": 0,
 			"channel": 14,
 			"type": "synth",
+			"gate": 4,
 			"track": 14
 		},
 		{
@@ -8499,6 +3071,7 @@
 			"position": 0,
 			"channel": 15,
 			"type": "synth",
+			"gate": 4,
 			"track": 15
 		}
 	]

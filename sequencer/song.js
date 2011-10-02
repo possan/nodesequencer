@@ -135,6 +135,8 @@ exports.Pattern = function() {
 			if( !this.isEmpty() ){
 				json.steps = [];
 				for( var j=0; j<16; j++ ){
+					if( _steps[j].isEmpty() )
+						continue;
 					var data = _steps[ j ].toJson();
 					data.step = j;
 					json.steps.push( data );
@@ -157,6 +159,7 @@ exports.SongTrack = function( index, channel, type ) {
 		enabled: true,
 		track: index,
 		channel: channel,
+		gate: 4,
 		type: type,
 		
 		getPattern: function(s){
@@ -180,6 +183,8 @@ exports.SongTrack = function( index, channel, type ) {
 				this.enabled = json.enabled;
 			if( typeof(json.position) != 'undefined' )
 				this.position = json.position;	
+			if( typeof(json.gate) != 'undefined' )
+				this.gate = json.gate;	
 			if( typeof(json.type) != 'undefined' )
 				this.type = json.type;	
 			if( typeof(json.patterns) != 'undefined' )
@@ -196,6 +201,7 @@ exports.SongTrack = function( index, channel, type ) {
 				position: this.position,
 				channel: this.channel,
 				type: this.type,
+				gate: this.gate
 			};
 			for( var j=0; j<16; j++ ){
 				if( _patterns[j].isEmpty() ) {			

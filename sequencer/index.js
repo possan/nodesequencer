@@ -135,11 +135,11 @@ $(document).ready( function() {
 		}	
 		console.log('keyboard triggered button ',fakebutton);
 		console.log('keyboard triggered knob ',fakeknob, fakeknobdir);		
-		if( fakebutton != -1 ){
+		if( fakebutton != -1 ) {
 		 	// event.preventDefault();
 			socket.emit( 'deviceButtonClick', { button:fakebutton } );
 		}
-		else if( fakeknob != -1 ){
+		else if( fakeknob != -1 ) {
 		 	// event.preventDefault(); 
 			socket.emit( 'deviceKnobTurn', { knob:fakeknob, delta:fakeknobdir } );
 		}

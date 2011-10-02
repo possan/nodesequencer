@@ -57,6 +57,8 @@ exports.Player = function( opts ){
 		},
 	
 		setBPM: function(bpm){ 
+			if( bpm == _bpm )
+				return;
 			_bpm = bpm;
 			calcticks(); 
 		},

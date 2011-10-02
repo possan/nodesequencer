@@ -10,7 +10,7 @@ exports.PatternsScreen = function(opts) {
 	return {
 		activate: function(host) {
 			_host = host;
-			_host.display.lcd = 'Patterns enable';
+			_host.display.lcdPrintAt( 1, 1, 'ENABLE PATTERNS' );
 		},
 		handleButton: function(id) {
 			if( id == Keys.KNOB2_UP ) { _host.state.currenttrack ++; if( _host.state.currenttrack > 15 ) _host.state.currenttrack = 0; }
@@ -33,7 +33,19 @@ exports.PatternsScreen = function(opts) {
 				_host.display.leds[Leds.PAD0+i] = sstp.enabled;
 			}
 			var ps = _host.sequencer.getPlayingPattern( _host.state.currenttrack );
-			_host.display.lcd = 'Enabled pattern\nClick to toggle\nTrack #'+_host.state.currenttrack+' '+ps;
+			
+		//	_host.display.lcd = 'Enabled pattern\nClick to toggle\nTrack #'+_host.state.currenttrack+' '+ps;
+			
+			// _host.display.lcdPrintAt( 1, 3, 'STRT' );
+			// _host.display.lcdPrintAt( 6, 3, 'END' );
+			_host.display.lcdPrintAt( 11, 3, 'TRAK' );
+			// _host.display.lcdPrintAt( 16, 3, 'PATT' );
+			
+			// _host.display.lcdPrintAt( 1, 4, sstp.start + ' ' );
+			// _host.display.lcdPrintAt( 6, 4, sstp.end + ' ' );
+			_host.display.lcdPrintAt( 11, 4, _host.state.currenttrack+' ' );
+			// _host.display.lcdPrintAt( 16, 4, _host.state.currentpattern+' ' );
+			
 			if( ps != -1 && b == 0 )
 				_host.display.leds[Leds.PAD0+ps] = !_host.display.leds[Leds.PAD0+ps];
 		}
