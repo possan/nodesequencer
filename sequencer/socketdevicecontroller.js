@@ -1,11 +1,12 @@
-var devicecontrollermodule = require('./devicecontroller.js');
+var DeviceControllerFactory = require('./devicecontrollerfactory').DeviceControllerFactory;
+C = require('./constants').C;
 
 exports.SocketDeviceController = function( opts ) {
 	
 	var _sock = opts.socket || null;
-	var _seq = opts.sequencer || null;
+	var _seq = opts.sequencer || null;	
 	
-	var _controller = new devicecontrollermodule.DeviceController( { 
+	var _controller = DeviceControllerFactory.createDeviceController( { 
 		sequencer: _seq, 
 		updateCallback: function( arg ) {
 			_sock.emit( 'updateDevice', arg );
@@ -14,24 +15,16 @@ exports.SocketDeviceController = function( opts ) {
 	
 	console.log('in SocketDeviceController constructor.');
 	
-	_sock.on('deviceButtonDown', function(data) {
-		_controller.handleButtonDown( data.button );
-	} );
+	_sock.on('deviceButtonDown', function(data) { _controller.handleEvent( { type: C.Events.BUTTON_DOWN, button: data.button } ); } );
+	_sock.on('deviceButtonUp', function(data) { _controller.handleEvent( { type: C.Events.BUTTON_UP, button: data.button } ); } );
+	_sock.on('deviceButtonClick', function(data) { _controller.handleEvent( { type: C.Events.BUTTON_CLICK, button: data.button } ); } );
+
+	var timer = setInterval( function() { _controller.handleEvent( { type: C.Events.UI_UPDATE } ); }, 40 );
 	
-	_sock.on('deviceButtonUp', function(data) {
-		_controller.handleButtonUp( data.button );
-	} );
-	
-	_sock.on('deviceButtonClick', function(data) {
-		_controller.handleButtonClick( data.button );
-	} );
-	
-	return {
-		update: function() {
-			// console.log('socket update',_sock.id)
-			_controller.update();
-		}
-	};
+	_sock.on('disconnect', function () {
+		console.log('disconnect.');
+		clearTimeout(timer);
+	});
 	
 };
 

@@ -1,12 +1,14 @@
 var httpmodule = require('http');
 var socketiomodule = require('socket.io');
 var fs = require('fs');
-var playermodule = require('./player.js');
-var songmodule = require('./song.js');
-var sequencermodule = require('./sequencer.js');
-var devicecontrollermodule = require('./devicecontroller.js');
-var socketdevicecontrollermodule = require('./socketdevicecontroller.js');
-
+var playermodule = require('./player');
+var songmodule = require('./song');
+var sequencermodule = require('./sequencer');
+var devicecontrollermodule = require('./devicecontroller');
+var devicecontrollerfactorymodule = require('./devicecontrollerfactory').DeviceControllerFactory;
+var socketdevicecontrollermodule = require('./socketdevicecontroller');
+var ScreenRepository = require('./screenrepo').ScreenRepository;
+C = require('./constants').C;
 
 //
 // Set up MIDI
@@ -31,8 +33,21 @@ var seq = new sequencermodule.Sequencer( {
 } );
 
 //
-// Set up device controller
+// Set up screens
 //
+
+ScreenRepository.screens = [];
+require('./screen_notes').registerScreens( ScreenRepository.screens );
+require('./screen_mix').registerScreens( ScreenRepository.screens );
+require('./screen_loop').registerScreens( ScreenRepository.screens );
+require('./screen_patterns').registerScreens( ScreenRepository.screens );
+
+var dummy = devicecontrollerfactorymodule.createDeviceController({sequencer:seq});
+dummy.handleEvent( { type:'update' } );
+dummy.handleEvent( { type:'click', button:C.Keys.MODE0 } );
+dummy.handleEvent( { type:'update' } );
+dummy.handleEvent( { type:'update' } );
+dummy.handleEvent( { type:'update' } );
 
 //
 // Set up socket/http stuff
@@ -76,16 +91,7 @@ var io = socketiomodule.listen(app);
 io.set('log level', 2);
 io.sockets.on('connection', function (socket) {
 	console.log('new connection',socket.id);
-	var sock = socket;
-	(function(){
-		var dc = new socketdevicecontrollermodule.SocketDeviceController({ sequencer: seq, socket: sock });
-		var timer = setInterval( function() { dc.update(); }, 30 );
-		sock.on('disconnect', function () {
-			console.log('disconnect.');
-    		// sockets.emit('user disconnected');
-			clearTimeout(timer);
-  		});
-	})();
+	new socketdevicecontrollermodule.SocketDeviceController( { sequencer: seq, socket: socket } );
 });
 
 
@@ -122,14 +128,7 @@ fs.readFile('lastsong.json', function (err,json) {
 	}
 });
 
-/* while( !loaded ) {
-	// vänta på laddad klart.
-	// console.log('loading...');
-} */
-
-
 setInterval(function() { doSave(); },10000);
-
 
 //
 // Set up sequence player

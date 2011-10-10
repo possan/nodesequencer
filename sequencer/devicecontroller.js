@@ -2,13 +2,9 @@
 // Device controller
 //
  
-Keys = require('./keys.js').Keys;
-Leds = require('./leds.js').Leds;
-
-NotesScreen = require('./screen_notes.js').NotesScreen;
-MixScreen = require('./screen_mix.js').MixScreen;
-LoopScreen = require('./screen_loop.js').LoopScreen;
-PatternsScreen = require('./screen_patterns.js').PatternsScreen;
+C = require('./constants').C;
+ScreenRouter = require('./screenrouter').ScreenRouter;
+ScreenRepository = require('./screenrepo').ScreenRepository;
 
 var DisplayBuffer = function( callback ) {
 	
@@ -72,6 +68,7 @@ var HostInfo = function(){
 exports.DeviceController = function( opts ) {
 
 	var _updateCallback = opts.updateCallback || null;	
+	
 	var fireUpdateDevice = function(data) {
 		if( _updateCallback == null )
 			return;
@@ -79,6 +76,8 @@ exports.DeviceController = function( opts ) {
 		_updateCallback( data );
 	};
 	
+	var router = new ScreenRouter( ScreenRepository.screens );
+
 	var host = new HostInfo(); 	
 	host.sequencer = opts.sequencer || null;
 	host.song = host.sequencer.getSong();
@@ -87,67 +86,47 @@ exports.DeviceController = function( opts ) {
 	host.state.currenttrack = 0;
 	host.state.currentpattern = 0;
 	host.state.currentnote = 36;
+	
+	router.switchTo( 'mode0', host );
 
-	var screens = {};
-	screens["note"] = new NotesScreen();
-	screens["patterns"] = new PatternsScreen();
-	screens["mix"] = new MixScreen();
-	screens["loop"] = new LoopScreen();
-
-    var lastscreen = '';
- 
-	var checkNextScreen = function() {
-		if( host.nextscreen == '' )
-			return;
-		if( host.nextscreen != lastscreen ) {
-			host.screen = host.nextscreen;
-			console.log('changing screen to',host.screen);
-			fireUpdateDevice( { type: 'lcd-clear' } );
-			host.subscreen = 0;
-			screens[ host.screen ].activate( host );
-			screens[ host.screen ].update( host );
-			lastscreen = host.screen;
-		} else {
-			host.subscreen ++;
-			screens[ host.screen ].activate( host );
-			screens[ host.screen ].update( host );
-		}
-		host.nextscreen = '';
-	}	
-
+	var innerUpdate = function() {
+		var s = host.sequencer.getPlayingGlobalStep();
+		var b = Math.floor( s ) % 16;
+		var sn = router.getScreen();
+		host.display.leds[ C.Leds.BEAT0 ] = (b==0);
+		host.display.leds[ C.Leds.BEAT1 ] = (b==4);
+		host.display.leds[ C.Leds.BEAT2 ] = (b==8);
+		host.display.leds[ C.Leds.BEAT3 ] = (b==12);
+		host.display.leds[ C.Leds.MODE0 ] = (sn == 'mode0');
+		host.display.leds[ C.Leds.MODE1 ] = (sn == 'mode1');
+		host.display.leds[ C.Leds.MODE2 ] = (sn == 'mode2');
+		host.display.leds[ C.Leds.MODE3 ] = (sn == 'mode3');
+		// router.handleEvent( { type:Events.UI_UPDATE, host:host } );
+		host.display.sendUpdate();
+	};
+	
 	return {		
-
-		handleButtonDown: function( id ) { },
-		handleButtonUp: function( id ) { },
-		handleDeviceEvent: function( eventtype, eventarg ) { },
-
-		handleButtonClick: function( id ) {
-			console.log( 'DeviceController handleButtonClick', id, host.screen ); 
-			if( id == Keys.MODE0 ) { host.nextscreen = 'note'; }
-			if( id == Keys.MODE1 ) { host.nextscreen = 'patterns'; }
-			if( id == Keys.MODE2 ) { host.nextscreen = 'loop'; }
-			if( id == Keys.MODE3 ) { host.nextscreen = 'mix'; }
-			if( typeof( screens[ host.screen ] ) != 'undefined' )
- 				screens[ host.screen ].handleButton( id );
-			checkNextScreen();
-			this.update();
+		
+		registerScreen: function(obj){
+			obj.register(host);
 		},
 		
-		update: function() {
-			var s = host.sequencer.getPlayingGlobalStep();
-			var b = Math.floor( s ) % 16;
-			host.display.leds[ Leds.BEAT0 ] = (b==0);
-			host.display.leds[ Leds.BEAT1 ] = (b==4);
-			host.display.leds[ Leds.BEAT2 ] = (b==8);
-			host.display.leds[ Leds.BEAT3 ] = (b==12);
-			host.display.leds[ Leds.MODE0 ] = (host.screen == 'note');
-			host.display.leds[ Leds.MODE1 ] = (host.screen == 'patterns');
-			host.display.leds[ Leds.MODE2 ] = (host.screen == 'loop');
-			host.display.leds[ Leds.MODE3 ] = (host.screen == 'mix');
-			checkNextScreen();
-			if( typeof( screens[ host.screen ] ) != 'undefined' ) 
-				screens[ host.screen ].update();
-			host.display.sendUpdate();
+		handleEvent: function( event ) {
+			// console.log('handleEvent',event);
+			var newevent = event;
+			newevent.host = host;
+			if( newevent.type == C.Events.BUTTON_CLICK ){
+				if( newevent.button == C.Keys.MODE0 ) router.switchTo( 'mode0', host );
+				if( newevent.button == C.Keys.MODE1 ) router.switchTo( 'mode1', host );
+				if( newevent.button == C.Keys.MODE2 ) router.switchTo( 'mode2', host );
+				if( newevent.button == C.Keys.MODE3 ) router.switchTo( 'mode3', host );
+			}
+			router.handleEvent( newevent );
+			if( newevent.type == C.Events.BUTTON_CLICK || 
+				newevent.type == C.Events.BUTTON_DOWN || 
+				newevent.type == C.Events.BUTTON_UP || 
+				newevent.type == C.Events.UI_UPDATE )
+				innerUpdate();
 		}
 	}
 };

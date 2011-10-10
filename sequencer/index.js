@@ -25,7 +25,7 @@ $(document).ready( function() {
 	
 	$('.clickable').each(function(){
 		// console.log('wire up button',this);
-		/*
+		
 		$(this).bind('mousedown',function(){
 			// console.log('button down',this.id);
 			socket.emit('deviceButtonDown',{button:parseInt(this.id.substring(6),10)});
@@ -35,7 +35,7 @@ $(document).ready( function() {
 			// console.log('button up',this.id);
 			socket.emit('deviceButtonUp',{button:parseInt(this.id.substring(6),10)});
 		});
-		*/
+		
 		$(this).bind('click',function(event){
 			// console.log('button click',this.id);
 			socket.emit('deviceButtonClick',{button:parseInt(this.id.substring(6),10)});

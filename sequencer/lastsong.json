@@ -584,6 +584,10 @@
 								{
 									"n": 43,
 									"v": 100
+								},
+								{
+									"n": 38,
+									"v": 100
 								}
 							],
 							"step": 2
@@ -606,9 +610,26 @@
 								{
 									"n": 43,
 									"v": 100
+								},
+								{
+									"n": 38,
+									"v": 100
 								}
 							],
 							"step": 6
+						},
+						{
+							"notes": [
+								{
+									"n": 36,
+									"v": 100
+								},
+								{
+									"n": 39,
+									"v": 100
+								}
+							],
+							"step": 7
 						},
 						{
 							"notes": [
@@ -622,11 +643,33 @@
 						{
 							"notes": [
 								{
+									"n": 41,
+									"v": 100
+								}
+							],
+							"step": 9
+						},
+						{
+							"notes": [
+								{
 									"n": 43,
+									"v": 100
+								},
+								{
+									"n": 38,
 									"v": 100
 								}
 							],
 							"step": 10
+						},
+						{
+							"notes": [
+								{
+									"n": 40,
+									"v": 100
+								}
+							],
+							"step": 11
 						},
 						{
 							"notes": [
@@ -646,6 +689,14 @@
 								{
 									"n": 43,
 									"v": 100
+								},
+								{
+									"n": 36,
+									"v": 100
+								},
+								{
+									"n": 38,
+									"v": 100
 								}
 							],
 							"step": 14
@@ -654,6 +705,10 @@
 							"notes": [
 								{
 									"n": 36,
+									"v": 100
+								},
+								{
+									"n": 41,
 									"v": 100
 								}
 							],
@@ -788,7 +843,7 @@
 			"position": 0,
 			"channel": 0,
 			"type": "drum",
-			"gate": 7,
+			"gate": 8,
 			"track": 0
 		},
 		{
@@ -890,6 +945,15 @@
 								}
 							],
 							"step": 12
+						},
+						{
+							"notes": [
+								{
+									"n": 36,
+									"v": 100
+								}
+							],
+							"step": 15
 						}
 					],
 					"pattern": 0
@@ -1004,7 +1068,7 @@
 			"position": 0,
 			"channel": 1,
 			"type": "synth",
-			"gate": 5,
+			"gate": 9,
 			"track": 1
 		},
 		{
@@ -1221,7 +1285,7 @@
 					"pattern": 15
 				}
 			],
-			"enabled": true,
+			"enabled": false,
 			"position": 0,
 			"channel": 2,
 			"type": "synth",
@@ -1232,8 +1296,8 @@
 			"patterns": [
 				{
 					"enabled": true,
-					"start": 0,
-					"end": 15,
+					"start": 5,
+					"end": 7,
 					"steps": [
 						{
 							"notes": [
@@ -1491,7 +1555,7 @@
 					"pattern": 15
 				}
 			],
-			"enabled": true,
+			"enabled": false,
 			"position": 0,
 			"channel": 3,
 			"type": "drum",
@@ -1853,7 +1917,7 @@
 					"pattern": 15
 				}
 			],
-			"enabled": true,
+			"enabled": false,
 			"position": 0,
 			"channel": 4,
 			"type": "drum",
@@ -2114,7 +2178,7 @@
 					"pattern": 15
 				}
 			],
-			"enabled": true,
+			"enabled": false,
 			"position": 0,
 			"channel": 5,
 			"type": "drum",
@@ -2232,7 +2296,7 @@
 					"pattern": 15
 				}
 			],
-			"enabled": true,
+			"enabled": false,
 			"position": 0,
 			"channel": 6,
 			"type": "drum",
@@ -2541,7 +2605,7 @@
 					"pattern": 15
 				}
 			],
-			"enabled": true,
+			"enabled": false,
 			"position": 0,
 			"channel": 8,
 			"type": "synth",
@@ -2659,7 +2723,7 @@
 					"pattern": 15
 				}
 			],
-			"enabled": true,
+			"enabled": false,
 			"position": 0,
 			"channel": 9,
 			"type": "synth",
@@ -2777,7 +2841,7 @@
 					"pattern": 15
 				}
 			],
-			"enabled": true,
+			"enabled": false,
 			"position": 0,
 			"channel": 10,
 			"type": "synth",
@@ -2835,7 +2899,7 @@
 					"pattern": 15
 				}
 			],
-			"enabled": true,
+			"enabled": false,
 			"position": 0,
 			"channel": 11,
 			"type": "synth",
@@ -2951,7 +3015,7 @@
 					"pattern": 15
 				}
 			],
-			"enabled": true,
+			"enabled": false,
 			"position": 0,
 			"channel": 13,
 			"type": "synth",
@@ -3009,7 +3073,7 @@
 					"pattern": 15
 				}
 			],
-			"enabled": true,
+			"enabled": false,
 			"position": 0,
 			"channel": 14,
 			"type": "synth",
