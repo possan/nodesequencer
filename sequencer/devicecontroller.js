@@ -5,57 +5,15 @@
 C = require('./constants').C;
 ScreenRouter = require('./screenrouter').ScreenRouter;
 ScreenRepository = require('./screenrepo').ScreenRepository;
-
-var DisplayBuffer = function( callback ) {
-	
-	var _updateCallback = callback;
-
-	var	lastleds = [];
-	var	lastlcd = '--';
-	
-	var ret = {
-	
-		leds: [],
-		lcd: '',
-		
-		lcdPrintAt: function( column, row, str ) {
-			_updateCallback( { type: 'lcd-xy', column:column, row:row, content: str } );
-		},
-			
-		sendUpdate: function() {
-			/*
-			if( this.lcd != lastlcd ) {
-				// console.log('lcd changed to:', this.lcd);
-				_updateCallback( { type: 'lcd-clear' } );
-				_updateCallback( { type: 'lcd', content: this.lcd } );
-				lastlcd = this.lcd;
-			}
-			*/
-			for( var i=0; i<50; i++ ) {
-				if( this.leds[i] != lastleds[i] ) {
-					// 	console.log('led '+i+' changed to '+this.leds[i]);
-					_updateCallback( { type: 'led', led: i, on: this.leds[i] } );
-				}
-				lastleds[i] = this.leds[i];
-			}
-		}
-		
-	};
-	
-	for( var i=0; i<100; i++ ) {
-		ret.leds.push(false);
-		lastleds.push(false);
-	}
-
-	return ret;
-};
- 
+DisplayBuffer = require('./displaybuffer').DisplayBuffer;
+DisplayBumper = require('./displaybumper').DisplayBumper;
 
 var HostInfo = function(){
 	return {
 		sequencer: null,
 		song: null,
 		display: null,
+		displaybumper: null,
 		screen: '',
 		nextscreen: '',
 		subscreen: 0,
@@ -63,7 +21,6 @@ var HostInfo = function(){
 		}
 	};
 }
-
 	
 exports.DeviceController = function( opts ) {
 
@@ -81,7 +38,8 @@ exports.DeviceController = function( opts ) {
 	var host = new HostInfo(); 	
 	host.sequencer = opts.sequencer || null;
 	host.song = host.sequencer.getSong();
-	host.display = new DisplayBuffer( fireUpdateDevice );
+	host.display = new DisplayBuffer( { width: 20, height: 4, callback: fireUpdateDevice } );
+	host.displaybumper = new DisplayBumper();
 	host.nextscreen = 'mix';
 	host.state.currenttrack = 0;
 	host.state.currentpattern = 0;
@@ -93,16 +51,17 @@ exports.DeviceController = function( opts ) {
 		var s = host.sequencer.getPlayingGlobalStep();
 		var b = Math.floor( s ) % 16;
 		var sn = router.getScreen();
-		host.display.leds[ C.Leds.BEAT0 ] = (b==0);
-		host.display.leds[ C.Leds.BEAT1 ] = (b==4);
-		host.display.leds[ C.Leds.BEAT2 ] = (b==8);
-		host.display.leds[ C.Leds.BEAT3 ] = (b==12);
+		host.display.leds[ C.Leds.BEAT0 ] = (b==0 || b == 1);
+		host.display.leds[ C.Leds.BEAT1 ] = (b==4 || b == 5);
+		host.display.leds[ C.Leds.BEAT2 ] = (b==8 || b == 9);
+		host.display.leds[ C.Leds.BEAT3 ] = (b==12 || b == 13);
 		host.display.leds[ C.Leds.MODE0 ] = (sn == 'mode0');
 		host.display.leds[ C.Leds.MODE1 ] = (sn == 'mode1');
 		host.display.leds[ C.Leds.MODE2 ] = (sn == 'mode2');
 		host.display.leds[ C.Leds.MODE3 ] = (sn == 'mode3');
 		// router.handleEvent( { type:Events.UI_UPDATE, host:host } );
-		host.display.sendUpdate();
+		host.displaybumper.update( host );
+		host.display.update();
 	};
 	
 	return {		

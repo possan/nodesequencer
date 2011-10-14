@@ -37,7 +37,7 @@ exports.Step = function(){
 			for(var j=0; j<_notes.length; j++)
 				if( _notes[j].n == n )
 					idx = j;
-			if( v > 0 ) {
+		//	if( v > 0 ) {
 				if( idx == -1 ) {
 					console.log('adding note');
 					_notes.push( { n: n, v: v } );
@@ -46,12 +46,12 @@ exports.Step = function(){
 					console.log('updating note #'+idx);
 					_notes[idx].v = v;
 				}
-			} else {
+		/*	} else {
 				if( idx != -1 ){
 					console.log('removing note at index #'+idx);
 					_notes.splice(idx,1);
 				}
-			}
+			} */
 		},
 		
 		addNote: function(n,v) {
@@ -157,6 +157,8 @@ exports.SongTrack = function( index, channel, type ) {
 		
 		position: 0,
 		enabled: true,
+		advance: false,
+		cue: -1, 
 		track: index,
 		channel: channel,
 		gate: 4,
@@ -169,12 +171,14 @@ exports.SongTrack = function( index, channel, type ) {
 		},
 		
 		getNextEnabledPattern: function(lastpattern) {
+			// if(lastpattern == -1 ) {
 			for( var j=0; j<16; j++ )
 				if( _patterns[j].enabled && j > lastpattern )
 					return j;
 			for( var j=0; j<16; j++ )
 				if( _patterns[j].enabled )
 					return j;
+			// }
 			return -1;
 		},
 		

@@ -15,6 +15,7 @@ div.lcd {
 	background-color: #142;
 	color: #5f6;
 	font: 12pt monospace;
+	white-space: pre;
 }
 	
 div.lcd  i {		

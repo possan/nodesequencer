@@ -7,11 +7,6 @@ $(document).ready( function() {
 
 	var socket = io.connect('http://'+location.host);
 	
-	socket.on('news', function (data) {
-		console.log(data);
-		socket.emit('my other event', { my: 'data' });
-	});
-
 	socket.on('step', function (data) {
 		var s = Math.floor(data.step) % 16;
 		$('#steplabel').html( s );
@@ -152,7 +147,7 @@ $(document).ready( function() {
 		for(var j=0; j<4; j++){
 			var row = [];
 			for( var i=0; i<20; i++ )
-				row.push('_');
+				row.push(' ');
 			lcdbuffer.push(row);
 		}
 	}
@@ -161,13 +156,10 @@ $(document).ready( function() {
 		var html = "";
 		for(var j=0; j<4; j++){
 			if( j > 0 )
-				html += "<br/>\n";
+				html += "\n";
 			for( var i=0; i<20; i++ ){
 				var ch = lcdbuffer[j][i];
-				if( ch == '_' )
-				 	html += '<i>'+ch+'</i>';
-				else
-					html += ch;
+				html += ch;
 			}
 		}
 		$('#lcd').html( html );		
@@ -203,6 +195,7 @@ $(document).ready( function() {
 				el.removeClass('on');
 		}
 		else if( d.type == 'lcd' ) {
+			clearLcd();
 			addLcd( 1, 1, d.content );
 			drawLcd();
 		}

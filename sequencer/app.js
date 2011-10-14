@@ -37,17 +37,22 @@ var seq = new sequencermodule.Sequencer( {
 //
 
 ScreenRepository.screens = [];
+
 require('./screen_notes').registerScreens( ScreenRepository.screens );
+require('./screen_live').registerScreens( ScreenRepository.screens );
 require('./screen_mix').registerScreens( ScreenRepository.screens );
 require('./screen_loop').registerScreens( ScreenRepository.screens );
 require('./screen_patterns').registerScreens( ScreenRepository.screens );
+require('./screen_trackconfig').registerScreens( ScreenRepository.screens );
 
+/*
 var dummy = devicecontrollerfactorymodule.createDeviceController({sequencer:seq});
 dummy.handleEvent( { type:'update' } );
 dummy.handleEvent( { type:'click', button:C.Keys.MODE0 } );
 dummy.handleEvent( { type:'update' } );
 dummy.handleEvent( { type:'update' } );
 dummy.handleEvent( { type:'update' } );
+*/
 
 //
 // Set up socket/http stuff

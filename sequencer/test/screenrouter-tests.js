@@ -18,7 +18,7 @@ var DummyScreen = function(){
 	};
 }
 
-exports["routes-events"] = function(test) {
+exports["routes-no-events-to-invalid-screen"] = function(test) {
 	var sr = new ScreenRouter();
 	var d1 = sr.register('a',new DummyScreen());
 	var d2 = sr.register('b',new DummyScreen());

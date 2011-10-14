@@ -1,4 +1,4 @@
-var deviceControllerFactory = require('../devicecontrollerfactory.js').DeviceControllerFactory;
+var deviceControllerFactory = require('../devicecontrollerfactory').DeviceControllerFactory;
 
 exports.create = function(test){
 	var mockseq = { getSong: function () {return {} } };
@@ -9,7 +9,7 @@ exports.create = function(test){
 };
 
 exports.plugins1 = function(test){
-	var mockseq = { getSong: function () {return {} } };
+	var mockseq = { getSong: function () { return {} } };
 	var cb = function( args ){ console.log(args); }
 	var mockdata1 = 0;
 	var mockdata2 = 0;

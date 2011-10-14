@@ -5,14 +5,12 @@
 C = require('./constants').C;
  
 MixScreen = function() {
+	
 	var _host = null;
+	
 	var _activate = function(host) {
 		_host = host;
-		// _host.display.lcd = '';
-		_host.display.lcdPrintAt( 1, 1, 'Mixer' );
-		_host.display.lcdPrintAt( 1, 2, 'Click to mute' );
-		_host.display.lcdPrintAt( 15, 3, 'FINE ' );
-		_host.display.lcdPrintAt( 10, 3, 'BPM ' );
+		_host.displaybumper.setMessage('MIXER');
 	};
 		
 	var _handleButton = function( id ) {
@@ -32,6 +30,12 @@ MixScreen = function() {
 	var _update = function() {
 		var bpm = _host.sequencer.player.getBPM();
 		//	_host.display.lcd = 'Mixer\nClick to mute\nBPM: '+Math.round(bpm,2);
+
+		_host.display.lcdClear();
+		_host.display.lcdPrintAt( 1, 1, 'Mixer' );
+		_host.display.lcdPrintAt( 1, 2, 'Click to mute' );
+		_host.display.lcdPrintAt( 15, 3, 'FINE ' );
+		_host.display.lcdPrintAt( 10, 3, 'BPM ' );
 		_host.display.lcdPrintAt( 10, 4, (Math.round(bpm*10)/10)+'  ' );
 			
 		var s = _host.sequencer.getPlayingGlobalStep();

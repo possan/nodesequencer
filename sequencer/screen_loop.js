@@ -11,7 +11,7 @@ LoopStartScreen = function(opts) {
 	
 	var _activate = function(host) {
 		_host = host;
-		_host.display.lcdPrintAt( 1,1, 'PATTERNLOOP STRT' );
+		_host.displaybumper.setMessage('PATTERN LOOP','START POINT');
 	};
 
 	var _handleButton = function(id) {
@@ -49,7 +49,9 @@ LoopStartScreen = function(opts) {
 		if( pp == _host.state.currentpattern && sstp.enabled && strk.enabled )
 			_host.display.leds[ C.Leds.PAD0+ps ] = !_host.display.leds[ C.Leds.PAD0+ps ];
 				
-		_host.display.lcdPrintAt( 1, 3, 'STRT' );
+		_host.display.lcdClear();
+		_host.display.lcdPrintAt( 1,1, 'PATTERNLOOP STRT' );
+		_host.display.lcdPrintAt( 1, 3, 'STA*' );
 		_host.display.lcdPrintAt( 6, 3, 'END' );
 		_host.display.lcdPrintAt( 11, 3, 'TRAK' );
 		_host.display.lcdPrintAt( 16, 3, 'PATT' );
@@ -75,7 +77,7 @@ LoopEndScreen = function( opts ) {
 
 	var _activate = function( host ) {
 		_host = host;
-		_host.display.lcdPrintAt( 1,1, 'PATTERNLOOP END' );
+		_host.displaybumper.setMessage('PATTERN LOOP','END POINT');
 	};
 	
 	var _handleButton = function(id) {
@@ -116,9 +118,12 @@ LoopEndScreen = function( opts ) {
 
 		if( pp == _host.state.currentpattern && sstp.enabled && strk.enabled )
 			_host.display.leds[ C.Leds.PAD0+ps ] = !_host.display.leds[ C.Leds.PAD0+ps ];
-	
+
+		_host.display.lcdClear();
+		_host.display.lcdPrintAt( 1,1, 'PATTERNLOOP END' );
+
 		_host.display.lcdPrintAt( 1, 3, 'STRT' )
-		_host.display.lcdPrintAt( 6, 3, 'END' );
+		_host.display.lcdPrintAt( 6, 3, 'END*' );
 		_host.display.lcdPrintAt( 11, 3, 'TRAK' );
 		_host.display.lcdPrintAt( 16, 3, 'PATT' );
 
@@ -140,8 +145,8 @@ LoopEndScreen = function( opts ) {
 }; 
 
 exports.registerScreens = function( repo ) {
-	repo.push( { name: 'mode1', factory: function(){ return new LoopStartScreen(); } } )
-	repo.push( { name: 'mode1', factory: function(){ return new LoopEndScreen(); } } )
+	repo.push( { name: 'mode1', factory: function(){ return new LoopEndScreen(); } } );
+	repo.push( { name: 'mode1', factory: function(){ return new LoopStartScreen(); } } );
 };
 
 

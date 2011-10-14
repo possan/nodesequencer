@@ -36,13 +36,13 @@ exports.ScreenRouter = function( repo ) {
 			var ok = false;
 			if( name === _name ) {
 				
-				console.log('switch within subscreen:',name);
+				// console.log('switch within subscreen:',name);
 				
 				if( typeof( _all[ _name ] ) != 'undefined' ) {
 					var nsub = 	_all[ _name ].length;
 					// har vi mer än en undersida, isf byt, annars inte
 					
-					console.log(nsub,'subscreens');
+					// console.log(nsub,'subscreens');
 					
 					if( nsub > 1 ) {
 						// deactivate current
@@ -54,18 +54,18 @@ exports.ScreenRouter = function( repo ) {
 						if( _sub >= nsub )
 							_sub = 0;
 
-						console.log('next subscreen',_sub);
+						// console.log('next subscreen',_sub);
 
 						// activate new
 						if( typeof( _all[ _name ][ _sub ] ) != 'undefined' )
 						{
 							if( _all[ _name ][ _sub ].instance == null )
 							{
-								console.log('creating instance of', _name );
+							//	console.log('creating instance of', _name );
 								_all[ _name ][ _sub ].instance = _all[ _name ][ _sub ].factory();
-								console.log('created', _all[ _name ][ _sub ].instance);
+							//	console.log('created', _all[ _name ][ _sub ].instance);
 							}
-							console.log('next subscreen', _all[ _name ][ _sub ].instance );
+							// console.log('next subscreen', _all[ _name ][ _sub ].instance );
 							if( _all[ _name ][ _sub ].instance != null )
 								_all[ _name ][ _sub ].instance.handleEvent( { type: 'activate', host : host } );
 						}
@@ -75,7 +75,7 @@ exports.ScreenRouter = function( repo ) {
 				}		
 			} else {
 				
-				console.log('switch to new screen:',name);
+				// console.log('switch to new screen:',name);
 				
 				// deactivate current
 				if( typeof( _all[ _name ] ) != 'undefined' )
@@ -92,9 +92,9 @@ exports.ScreenRouter = function( repo ) {
 					if( typeof( _all[ _name ][ _sub ] ) != 'undefined' )
 					{	
 						if( _all[ _name ][ _sub ].instance == null ){
-							console.log('creating instance of', _name );
+							// console.log('creating instance of', _name );
 							_all[ _name ][ _sub ].instance = _all[ _name ][ _sub ].factory();
-							console.log('created', _all[ _name ][ _sub ].instance);
+							// console.log('created', _all[ _name ][ _sub ].instance);
 						}
 						if( _all[ _name ][ _sub ].instance != null )
 							_all[ _name ][ _sub ].instance.handleEvent( { type: 'activate', host : host } );

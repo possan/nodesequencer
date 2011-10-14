@@ -11,9 +11,10 @@ var SeqTrack = function( opts ) {
 		
 		currentPattern: 0,
 		currentStep: 0,
+		cuedPattern: -1,
+		
 		
 		step: function() {
-			
 		}
 	}
 };
@@ -72,6 +73,20 @@ exports.Sequencer = function( opts ) {
 			return _step / _ppqn;
 		},
 		
+		getCuedPattern: function( track ){
+			if( track < 0 || track > 15 )
+				return -1;
+			var trk = _tracks[track];
+			return trk.cuedPattern;
+		},
+		
+		cuePattern: function( track, pattern ){
+			if( track < 0 || track > 15 )
+				return -1;
+			var trk = _tracks[track];
+			trk.cuedPattern = pattern;
+		},
+		
 		getPlayingPatternStep: function( track ) {
 			if( track < 0 || track > 15 )
 				return -1;
@@ -86,8 +101,7 @@ exports.Sequencer = function( opts ) {
 			return trk.currentPattern;
 		},
 		
-		queueEvents: function(trackindex,patindex,patstep) {
-			// console.log('queue events on track '+trackindex+', pattern '+patindex+', step '+patstep);
+		queueEvents: function(trackindex,patindex,patstep) {			
 			var strk = _song.getTrack(trackindex);
 			if( strk == null )
 				return;
@@ -100,85 +114,65 @@ exports.Sequencer = function( opts ) {
 			var snot = sstp.getNotes();
 			if( snot == null )
 				return;
-			// console.log('queue', snot);
+			if( strk.gate < 1 )
+				return;
 			for(var k=0; k<snot.length; k++ )
-				if( strk.gate > 0 )
+				if( snot[k].v > 0 )
 					this.queueNote( strk.channel, snot[k].n, snot[k].v, strk.gate/16 );
 		},
 		
 		step: function(arg) {
-
 			this.removeOldNotes();
-			
 			var ppqnstep = _step % _ppqn;
-			
-			if( ppqnstep == 0 ) {
+			if( ppqnstep == 0 ) {				
 				// time to step everything forward
-				
-				// console.log('step seq', rsp);
-
 				var stp = Math.floor( arg.step / arg.ppqn );
 				var rsp = stp % 16;
 				var rsp2 = stp % 128;
-				
+				console.log('step', rsp);
 				if( rsp2 == 0 ) { 
 					console.log('Resync all loops.');
 				}
-				
 				// se till att pattern är rätt 
 				for( var j=0; j<16; j++ ) {
-
 					var trk = _tracks[ j ];
 					var strk = _song.getTrack( j );
-
+					
+					var nextpat = false;
 					if( trk.currentPattern != -1 ) {
 						var p = strk.getPattern(trk.currentPattern);
-						
-						if( rsp2 == 0 ) {
-							trk.currentStep = p.start;
-						}
-							
-						if( trk.currentStep > p.end ) {
-							
-							trk.currentPattern = strk.getNextEnabledPattern( trk.currentPattern );
-							// console.log('changed to next pattern',trk.currentPattern,'on track',j);
-							if( trk.currentPattern != -1 ){
-								p = strk.getPattern(trk.currentPattern);
-								trk.currentStep = p.start;
-							}
-						}
-						
-						if( trk.currentPattern >= 0 && trk.currentStep >= 0 && strk.enabled )
-							this.queueEvents( j, trk.currentPattern, trk.currentStep );
-						
-						trk.currentStep ++;
-	
-					} else {
-						
+						if( rsp2 == 0 ) trk.currentStep = p.start;
+						if( trk.currentStep > p.end ) nextpat = true;
+					}
+					else 
+					{
 						// ingen nuvarande pattern, ska vi starta en?
 						// starta patterns görs endast på första 4/4-takten
-						
-						
-						if( rsp == 0 ) {
-							trk.currentPattern = strk.getNextEnabledPattern(-1);
-							// console.log('enabling pattern '+trk.currentPattern+' on track '+j);
-							if( trk.currentPattern != -1 ) {
-								var p = strk.getPattern(trk.currentPattern);
-								trk.currentStep = p.start;
-							}
-						}
-						
-						
-						if( trk.currentStep >= 0 )
-							this.queueEvents( j, trk.currentPattern, trk.currentStep );
+						if( rsp == 0 ) nextpat = true;
 					}
+
+					if( nextpat ){
+						if( trk.cuedPattern != -1 ) {
+							trk.currentPattern = trk.cuedPattern;
+							trk.cuedPattern = -1;
+						} else {
+					 		trk.currentPattern = strk.getNextEnabledPattern( trk.currentPattern );
+						}
+						// console.log('changed to next pattern',trk.currentPattern,'on track',j);
+						if( trk.currentPattern != -1 ) {
+							p = strk.getPattern(trk.currentPattern);
+							trk.currentStep = p.start;
+						}
+					}
+
+					if( trk.currentPattern >= 0 && trk.currentStep >= 0 && strk.enabled )
+						this.queueEvents( j, trk.currentPattern, trk.currentStep );
+					trk.currentStep ++;
 				}		
 			}
-
 			_step ++;
 		}
 	}
-	
 };
 
 
