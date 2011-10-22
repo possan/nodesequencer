@@ -3,6 +3,7 @@
 //
 
 C = require('./constants').C;
+Utils = require('./utils').Utils;
 
 DrumEditorScreen = function() {
 	var _host = null;
@@ -22,9 +23,9 @@ DrumEditorScreen = function() {
 		return keyprefix[k]+''+o;
 	};
 	
-	var _activate = function(host) {
+	var _activate = function(host) {
 		_host = host;
-		_host.displaybumper.setMessage('DRUM TRACK EDIT');
+		_host.displaybumper.setMessage('TRACK #'+_host.state.currenttrack, 'DRUMMACHINE');
 	};
 	
 	var _handleButton = function(id) {		
@@ -89,9 +90,6 @@ DrumEditorScreen = function() {
 
 PolySynthScreen = function() {
 	var _host = null;
-	var redrumkeys = [ 'BD', 'SD', 'SD2', 'FX', 'FX2' ,'FX3','FX4','HH', 'HH2','FX5' ];
-	var kongkeys = [ 'BD', 'SD', 'SD2', 'FX', 'FX2' ,'FX3' ,'HH' ,'HH2', 'FX4', 'FX5', 'FX6', 'FX7', 'FX8', 'FX9', 'F10', 'F11' ];
-	var drumkeys = redrumkeys; 
 	var keyprefix = [ 'C-', 'C#', 'D-', 'D#' ,'E-' ,'F-' ,'F#', 'G-', 'G#', 'A-' ,'A#' ,'B-' ];
 	var _getNoteName = function(id,mode) {
 		if( mode == 'drum' ) {
@@ -105,9 +103,9 @@ PolySynthScreen = function() {
 		return keyprefix[k]+''+o;
 	};
 	
-	var _activate = function(host) {
+	var _activate = function(host) {
 		_host = host;
-		_host.displaybumper.setMessage('POLY SYNTH EDIT');
+		_host.displaybumper.setMessage('TRACK #'+_host.state.currenttrack, 'POLY SYNTH');
 	};
 	
 	var _handleButton = function(id) {
@@ -127,7 +125,7 @@ PolySynthScreen = function() {
 			if( id >= C.Keys.PAD0 && id <= C.Keys.PAD15 ){
 				var stpobj = pat.getStep( id - C.Keys.PAD0 );
 				var oldnote = stpobj.getNote( _host.state.currentnote );
-				if( oldnote != null )
+				if( oldnote != null && oldnote.v > 10 )
 					stpobj.clearNote( _host.state.currentnote );
 				else
 					stpobj.addNote( _host.state.currentnote, 100 );
@@ -143,7 +141,7 @@ PolySynthScreen = function() {
 		for( var j=0; j<16; j++ ){
 			var stp = pat.getStep( j );
 			var oldnote = stp.getNote( _host.state.currentnote );
-			_host.display.leds[ C.Leds.PAD0 + j ] = (oldnote != null);
+			_host.display.leds[ C.Leds.PAD0 + j ] = (oldnote != null && oldnote.v > 10);
 		}		
 		_host.display.lcdClear();
 		_host.display.lcdPrintAt( 1, 1, 'DRUM EDITOR' );
@@ -192,9 +190,9 @@ MonoSynthScreen = function() {
 		return keyprefix[k]+''+o;
 	};
 	
-	var _activate = function(host) {
+	var _activate = function(host) {
 		_host = host;
-		_host.displaybumper.setMessage('MONO SYNTH EDIT');
+		_host.displaybumper.setMessage('TRACK #'+_host.state.currenttrack, 'MONO SYNTH');
 	};
 	
 	var _handleButton = function(id) {
@@ -250,16 +248,6 @@ MonoSynthScreen = function() {
 					stpobj.clearStep();
 					stpobj.setNote(note,100);
 				}
-				
-				
-				
-				// _host.state.currentnote );
-				/*
-				if( oldnote != null )
-					stpobj.clearNote( _host.state.currentnote );
-				else
-					stpobj.addNote( _host.state.currentnote, 100 );
-				*/
 		}
 	}; 
 	
@@ -333,7 +321,7 @@ MachineTypeScreen = function() {
 		var trk = _host.song.getTrack( _host.state.currenttrack );
 		if( editors[trk.type] )
 			editors[trk.type].handleEvent( { type:C.Events.UI_ACTIVATE, host: _host } );
-	}
+	};
 	
 	var _handleEvent = function( event ){
 		switch(event.type) {
@@ -350,10 +338,10 @@ MachineTypeScreen = function() {
 		var trk = _host.song.getTrack( _host.state.currenttrack );
 		if( editors[trk.type] )
 			editors[trk.type].handleEvent( event );
-	}
+	};
 	
    	return { handleEvent: _handleEvent };
-}
+};
 
 exports.registerScreens = function( repo ) {
 	repo.push( { name: 'mode0', factory: function(){ return new MachineTypeScreen(); } } );

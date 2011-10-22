@@ -9,16 +9,15 @@ ScreenRepository = require('./screenrepo').ScreenRepository;
 exports.DisplayBuffer = function( opts ) {
 	
 	var _width = opts.width || 20;
-	var _height = opts.height || 4;
+	var _height = opts.height || 4;
 	var _updateCallback = opts.callback || function( dummy ) { };
 
 	var	lastleds = [];
 	var	lastlcd = '--';
 	var _lcd = ['','','','','',''];
 	
-	_updateLcd = function(){
-		
-	}
+	_updateLcd = function() {
+	};
 	
 	var ret = {
 	

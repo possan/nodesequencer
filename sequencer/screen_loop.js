@@ -9,7 +9,7 @@ Utils = require('./utils').Utils;
 LoopStartScreen = function(opts) {	
 	var _host = null;
 	
-	var _activate = function(host) {
+	var _activate = function(host) {
 		_host = host;
 		_host.displaybumper.setMessage('PATTERN LOOP','START POINT');
 	};
@@ -75,7 +75,7 @@ LoopStartScreen = function(opts) {
 LoopEndScreen = function( opts ) {	
 	var _host = null;
 
-	var _activate = function( host ) {
+	var _activate = function( host ) {
 		_host = host;
 		_host.displaybumper.setMessage('PATTERN LOOP','END POINT');
 	};
@@ -122,7 +122,7 @@ LoopEndScreen = function( opts ) {
 		_host.display.lcdClear();
 		_host.display.lcdPrintAt( 1,1, 'PATTERNLOOP END' );
 
-		_host.display.lcdPrintAt( 1, 3, 'STRT' )
+		_host.display.lcdPrintAt( 1, 3, 'STRT' );
 		_host.display.lcdPrintAt( 6, 3, 'END*' );
 		_host.display.lcdPrintAt( 11, 3, 'TRAK' );
 		_host.display.lcdPrintAt( 16, 3, 'PATT' );

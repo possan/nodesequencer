@@ -10,12 +10,11 @@ TrackConfigScreen = function() {
 
 	var _par = 0;
 		
-	var _activate = function(host) {
+	var _activate = function(host) {
 		_host = host;
 		_host.displaybumper.setMessage('TRACK SETTINGS');
 	};
 	
-		
 	var _handleButton = function( id ) {
 
 		var strk = _host.song.getTrack( _host.state.currenttrack );
@@ -39,17 +38,15 @@ TrackConfigScreen = function() {
 			if( id == C.Keys.KNOB1_DN ) strk.channel = Utils.addclamp( strk.channel, -1, 0, 15 );
 		}
 		else  if( _par == 2 ) {
-			if( id == C.Keys.KNOB1_UP ) trk.gate = Utils.addclamp( trk.gate, 1, 0, 127 );
-			if( id == C.Keys.KNOB1_DN ) trk.gate = Utils.addclamp( trk.gate, -1, 0, 127 );
+			if( id == C.Keys.KNOB1_UP ) strk.gate = Utils.addclamp( strk.gate, 1, 0, 127 );
+			if( id == C.Keys.KNOB1_DN ) strk.gate = Utils.addclamp( strk.gate, -1, 0, 127 );
 		}
 		else  if( _par == 3 ) {
-			if( id == C.Keys.KNOB1_UP || id == C.Keys.KNOB1_DN ) trk.advance = !trk.advance;
+			if( id == C.Keys.KNOB1_UP || id == C.Keys.KNOB1_DN ) strk.advance = !strk.advance;
 		}
 		
 		if( id == C.Keys.KNOB2_UP ) _host.state.currenttrack = Utils.addmod( _host.state.currenttrack, 1, 0, 15 );
 		if( id == C.Keys.KNOB2_DN ) _host.state.currenttrack = Utils.addmod( _host.state.currenttrack, -1, 0, 15 );
-		
-		// if( id == C.Keys.KNOB2_UP || id == C.Keys.KNOB2_DN ) { _host.displaybumper.setMessage('TRACK #'+_host.state.currenttrack); }
 	};
 	 
 	var _update = function() {
@@ -77,25 +74,20 @@ TrackConfigScreen = function() {
 					_host.display.lcdPrintAt( 1, 2, 'Unknown' );
 					break;
 			}
-			// 
-			
+
 		} else if( _par == 1 ) {
 			// MIDI CHANNEL
 			_host.display.lcdPrintAt( 1, 1, 'MIDI Channel:' );
-			_host.display.lcdPrintAt( 1, 2, ''+strk.channel );
-			
+			_host.display.lcdPrintAt( 1, 2, ''+strk.channel );			
 		} else if( _par == 2 ) {
 			// GATE
 			_host.display.lcdPrintAt( 1, 1, 'Gate length:' );
 			_host.display.lcdPrintAt( 1, 2, ''+strk.gate );
-
 		} else if( _par == 3 ) {
 			_host.display.lcdPrintAt( 1, 1, 'Auto advance:' );
 			_host.display.lcdPrintAt( 1, 2, strk.advance ? "Yes": "No" );
-			
-			
 		}
-		
+
 		_host.display.lcdPrintAt( 10, 4, ''+_host.state.currenttrack );
 		for( var j=0; j<16; j++ ) {
 			_host.display.leds[ C.Leds.PAD0 + j ] = _host.state.currenttrack == j;

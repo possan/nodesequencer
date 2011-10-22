@@ -37,20 +37,23 @@ exports.Step = function(){
 			for(var j=0; j<_notes.length; j++)
 				if( _notes[j].n == n )
 					idx = j;
-		//	if( v > 0 ) {
-				if( idx == -1 ) {
-					console.log('adding note');
-					_notes.push( { n: n, v: v } );
-				}
-				else {
-					console.log('updating note #'+idx);
-					_notes[idx].v = v;
-				}
-		/*	} else {
-				if( idx != -1 ){
-					console.log('removing note at index #'+idx);
-					_notes.splice(idx,1);
-				}
+
+			//	if( v > 0 ) {
+			
+			if( idx == -1 ) {
+				console.log('adding note');
+				_notes.push( { n: n, v: v } );
+			}
+			else {
+				console.log('updating note #'+idx);
+				_notes[idx].v = v;
+			}
+		
+			/*	} else {
+			if( idx != -1 ){
+				console.log('removing note at index #'+idx);
+				_notes.splice(idx,1);
+			}
 			} */
 		},
 		
@@ -75,8 +78,8 @@ exports.Step = function(){
 			}
 			return json;
 		}
-	}
-}
+	};
+};
 
 exports.Pattern = function() {
 	
@@ -90,6 +93,15 @@ exports.Pattern = function() {
 		end: 15,
 		enabled: true,
 		
+		reset: function() {
+			this.start = 0;
+			this.end = 15;
+			// this.enabled = true;
+			_steps = [];
+			for( var s=0; s<16; s++ )
+				_steps.push( new exports.Step() );
+		},
+		
 		getStep: function(s){
 			if( s < 0 || s >= 16 )
 				return null;
@@ -102,7 +114,7 @@ exports.Pattern = function() {
 		},
 		
 		isEmpty: function(){
-			if( this.start != 0 || this.end != 15 )
+			if( this.start != 0 || this.end != 15 )
 				return false;
 			if( this.enabled == false )
 				return false;
@@ -113,6 +125,7 @@ exports.Pattern = function() {
 		},
 		
 		parseJson: function(json) {
+			this.reset();
 			if( typeof(json.enabled) != 'undefined' )
 				this.enabled = json.enabled;
 			if( typeof(json.start) != 'undefined' )
@@ -144,6 +157,7 @@ exports.Pattern = function() {
 			}
 			return json;
 		}
+		
 	};
 };
 
@@ -227,9 +241,15 @@ exports.Song = function() {
 	var _tracks = [];
 	for( var j=0; j<16; j++ ){
 		_tracks[j] = new exports.SongTrack( j, j, j>=10?"synth":"drum" );
+		for( var k=0; k<16; k++ ){
+			_tracks[j].getPattern(k).enabled = (k==0);
+		}
 	}
 	
 	return {
+		
+		bpm: 140,
+		shuffle: 5,
 		
 		getTrack: function(n){
 			if( n < 0 || n >= 16 )
@@ -238,6 +258,12 @@ exports.Song = function() {
 		},
 	
 		parseJson: function(json) {
+			if( typeof(json.bpm) != 'undefined' )
+				this.bpm = json.bpm;
+			
+			if( typeof(json.shuffle) != 'undefined' )
+				this.shuffle = json.shuffle;
+			
 			if( typeof(json.tracks) != 'undefined' )
 				for( var j=0; j<json.tracks.length; j++ ){
 					_tracks[ json.tracks[j].track ].parseJson( json.tracks[j] );
@@ -245,13 +271,12 @@ exports.Song = function() {
 		},
 	
 		toJson: function() {
-			var json = { tracks: [] };
-			for( var j=0; j<16; j++ ){
+			var json = { bpm: this.bpm, shuffle: this.shuffle, tracks: [] };
+			for( var j=0; j<16; j++ ) {
 				var data = _tracks[ j ].toJson();
 				data.track = j;
 				json.tracks.push( data );
 			}
-			
 			return json;
 		}
 	}; 

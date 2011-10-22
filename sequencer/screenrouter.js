@@ -24,7 +24,7 @@ exports.ScreenRouter = function( repo ) {
 		
 		register: function( name, handler ) {
 			var _h = handler;
-			_innerRegisterFactory( name, function() { return _h } );
+			_innerRegisterFactory( name, function() { return _h; } );
 			return _h;
 		},
 		

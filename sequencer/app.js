@@ -7,7 +7,9 @@ var sequencermodule = require('./sequencer');
 var devicecontrollermodule = require('./devicecontroller');
 var devicecontrollerfactorymodule = require('./devicecontrollerfactory').DeviceControllerFactory;
 var socketdevicecontrollermodule = require('./socketdevicecontroller');
+var arduinodevicecontrollermodule = require('./arduinodevicecontroller');
 var ScreenRepository = require('./screenrepo').ScreenRepository;
+var serialportmodule = require("serialport");
 C = require('./constants').C;
 
 //
@@ -67,9 +69,10 @@ function handler (req, res) {
 		{ url: '/', filename: 'index.html', type: 'text/html' }
 	];
 	var any = false;
-	for( k in staticfiles ) {	
+	for( var k in staticfiles ) {	
 		var file = staticfiles[k];	
-		if( req.url != file.url ) continue;
+		if( req.url != file.url )
+			continue;
 		any = true;
 	  	fs.readFile( __dirname + '/' + file.filename, function (err, data) {
 	    	if (err) {
@@ -99,6 +102,23 @@ io.sockets.on('connection', function (socket) {
 	new socketdevicecontrollermodule.SocketDeviceController( { sequencer: seq, socket: socket } );
 });
 
+//
+// Set up serialport stuff
+//
+
+try {
+	var com = new serialportmodule.SerialPort("/dev/tty.usbmodem411",{
+		baudrate: 9600,
+		parser: serialportmodule.parsers.readline("\n")
+	} );
+	console.log(com);
+	// got connection, use singleton ui
+	console.log('arduino connected, mirror displays - use singleton controller');
+	devicecontrollerfactorymodule.singleton = true;
+	new arduinodevicecontrollermodule.ArduinoDeviceController( { sequencer: seq, port: com } );
+} catch(e) {
+	console.log('no arduino connected.');
+}
 
 //
 // Load song and set up autosave
@@ -114,7 +134,7 @@ doSave = function() {
 	  if (err) throw err;
 	  console.log('Auto-saved song.');
 	});
-}
+};
 
 var loaded = false;
 fs.readFile('lastsong.json', function (err,json) {
@@ -133,13 +153,18 @@ fs.readFile('lastsong.json', function (err,json) {
 	}
 });
 
-setInterval(function() { doSave(); },10000);
+setInterval( function() { doSave(); }, 10000 );
 
 //
 // Set up sequence player
 // 
 
-seq.player = playermodule.Player( { ppqn: 48, callback: function(arg) { seq.step(arg); } } );
+seq.player = playermodule.Player( {
+	ppqn: 48,
+	callback: function( arg ) { 
+		seq.step( arg );
+	}
+} );
 
 console.log('starting playback.');
 seq.player.startTimer();

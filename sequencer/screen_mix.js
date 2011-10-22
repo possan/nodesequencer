@@ -3,12 +3,13 @@
 //
 
 C = require('./constants').C;
+Utils = require('./utils').Utils;
  
 MixScreen = function() {
 	
 	var _host = null;
 	
-	var _activate = function(host) {
+	var _activate = function(host) {
 		_host = host;
 		_host.displaybumper.setMessage('MIXER');
 	};
@@ -19,24 +20,26 @@ MixScreen = function() {
 			strk.enabled = !strk.enabled;
 			return;
 		}
-		var bpm = _host.sequencer.player.getBPM();
-		if( id == C.Keys.KNOB3_UP ) bpm += 0.1;
-		if( id == C.Keys.KNOB2_UP ) bpm += 1.0;
-		if( id == C.Keys.KNOB3_DN ) bpm -= 0.1;
-		if( id == C.Keys.KNOB2_DN ) bpm -= 1.0;
-		_host.sequencer.player.setBPM( bpm );
+
+		if( id == C.Keys.KNOB1_DN ) _host.song.shuffle = Utils.addclamp( _host.song.shuffle, 1, 0, 100 );
+		if( id == C.Keys.KNOB1_UP ) _host.song.shuffle = Utils.addclamp( _host.song.shuffle, -1, 0, 100 );
+		
+		if( id == C.Keys.KNOB2_UP ) _host.song.bpm = Math.round( _host.song.bpm + 1 );
+		if( id == C.Keys.KNOB2_DN ) _host.song.bpm = Math.round( _host.song.bpm - 1 );
+
+		if( id == C.Keys.KNOB3_UP ) _host.song.bpm += 0.02;
+		if( id == C.Keys.KNOB3_DN ) _host.song.bpm -= 0.02;
 	};
 	 
 	var _update = function() {
-		var bpm = _host.sequencer.player.getBPM();
-		//	_host.display.lcd = 'Mixer\nClick to mute\nBPM: '+Math.round(bpm,2);
-
 		_host.display.lcdClear();
 		_host.display.lcdPrintAt( 1, 1, 'Mixer' );
 		_host.display.lcdPrintAt( 1, 2, 'Click to mute' );
+		_host.display.lcdPrintAt( 5, 3, 'SHUF ' );
 		_host.display.lcdPrintAt( 15, 3, 'FINE ' );
 		_host.display.lcdPrintAt( 10, 3, 'BPM ' );
-		_host.display.lcdPrintAt( 10, 4, (Math.round(bpm*10)/10)+'  ' );
+		_host.display.lcdPrintAt( 10, 4, (Math.round(_host.song.bpm*100)/100)+' ' );
+		_host.display.lcdPrintAt( 5, 4, Math.round(_host.song.shuffle)+' ' );
 			
 		var s = _host.sequencer.getPlayingGlobalStep();
 		var b = Math.floor( s ) % 4;

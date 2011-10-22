@@ -23,10 +23,10 @@ exports.DisplayBumper = function( opts ) {
 			//	_host.display.lcdPrintAt( 1, 1, ''+_timer+' ' );
 			_timer --;
 		}
-	}
+	};
 	
 	if( opts )
 		ret.setMessage( opts.message, opts.message2 );
 	
 	return ret;
-}
+};

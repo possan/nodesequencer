@@ -22,7 +22,7 @@ LiveNotesScreen = function() {
 		return keyprefix[k]+''+o;
 	};
 	
-	var _activate = function(host) {
+	var _activate = function(host) {
 		_host = host;
 		_host.displaybumper.setMessage('LIVE PADS');
 	};

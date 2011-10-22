@@ -18,39 +18,15 @@ exports.Player = function( opts ){
 		var spb = 1.0 / (4 * bps);
 		_spt = spb / _ppqn;
 		console.log('bpm:',_bpm,'bps:',bps,'spb:',spb,'spt:',_spt);
-	}
+	};
 
 	calcticks();
 	
 	var _vclock = 0;
 	var _playclock = 0;
 	var _lt = 0;
-	
-	innerStep = function() {
-	
-		var t = microtime.nowDouble();
-		if( _lt == 0 )
-			_lt = t;
 
-		var dt = t - _lt;
-		// console.log('vclock',vclock,'dt',dt);
-		_vclock += dt;
-		_lt = t;
-
-		if( dt <= 0 )
-			return;
-
-		while( _playclock < _vclock ) {
-		
-			if( _callback != null )
-				_callback( { step : _step, ppqn : _ppqn } );
- 
-			_step ++;
-			_playclock += _spt;
-		}
-	};
-
-	return {
+	var exported = {
 	
 		getBPM: function(){ 
 			return _bpm; 
@@ -78,9 +54,38 @@ exports.Player = function( opts ){
 			var self = this;
 			setInterval( function() { 
 				self.step();
-			}, 3);
+			}, 1);
 		}
 	};
+	
+	innerStep = function() {
+	
+		var t = microtime.nowDouble();
+		if( _lt == 0 )
+			_lt = t;
+
+		var dt = t - _lt;
+		_vclock += dt;
+		_lt = t;
+
+		if( dt <= 0 )
+			return;
+
+		while( _playclock < _vclock ) {
+		
+			if( _callback != null )
+				_callback( { 
+					step : _step,
+					ppqn : _ppqn,
+					player: exported 
+				} );
+ 
+			_step ++;
+			_playclock += _spt;
+		}
+	};
+
+	return exported;
 };
 
 
