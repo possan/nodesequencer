@@ -201,11 +201,11 @@ CopyPatternScreen = function(opts) {
 	var _copyfrompat = -1;
 
 	var handleButton = function(id) {
-		
+
 		if (id == C.Keys.KNOB2_UP)
 			_host.state.currenttrack = Utils.addmod(_host.state.currenttrack,
 					1, 0, 15);
-		
+
 		if (id == C.Keys.KNOB2_DN)
 			_host.state.currenttrack = Utils.addmod(_host.state.currenttrack,
 					-1, 0, 15);
@@ -218,13 +218,13 @@ CopyPatternScreen = function(opts) {
 				_phase = 1;
 				_host.displaybumper.setMessage('PATTERN COPIED');
 			} else if (_phase == 1) {
-				var trk = _host.song.getTrack( _copyfromtrack );
-				var pat = trk.getPattern( _copyfrompat );
-				var trk2 = _host.song.getTrack( _host.state.currenttrack );
-				var pat2 = trk.getPattern( id - C.Keys.PAD0 );
-				var json =	pat.toJson();
-				console.log( 'copy payload',json );
-				pat2.parseJson(json);		
+				var trk = _host.song.getTrack(_copyfromtrack);
+				var pat = trk.getPattern(_copyfrompat);
+				var trk2 = _host.song.getTrack(_host.state.currenttrack);
+				var pat2 = trk.getPattern(id - C.Keys.PAD0);
+				var json = pat.toJson();
+				console.log('copy payload', json);
+				pat2.parseJson(json);
 				_phase = 0;
 				_host.displaybumper.setMessage('PATTERN PASTED');
 			}
@@ -281,7 +281,7 @@ CopyPatternScreen = function(opts) {
 };
 
 ClearPatternScreen = function(opts) {
-	
+
 	var _host = null;
 
 	var activate = function(host) {
@@ -294,20 +294,20 @@ ClearPatternScreen = function(opts) {
 	var _copyfrompat = -1;
 
 	var handleButton = function(id) {
-		
+
 		if (id == C.Keys.KNOB2_UP)
 			_host.state.currenttrack = Utils.addmod(_host.state.currenttrack,
 					1, 0, 15);
-		
+
 		if (id == C.Keys.KNOB2_DN)
 			_host.state.currenttrack = Utils.addmod(_host.state.currenttrack,
 					-1, 0, 15);
 
 		if (id >= C.Keys.PAD0 && id <= C.Keys.PAD15) {
-			
-			if( _phase == 1 ){
-				if( _host.state.currenttrack != _copyfromtrack ||
-					_host.state.currentpattern != _copyfrompat )
+
+			if (_phase == 1) {
+				if (_host.state.currenttrack != _copyfromtrack
+						|| _host.state.currentpattern != _copyfrompat)
 					_phase = 0;
 			}
 
@@ -315,15 +315,16 @@ ClearPatternScreen = function(opts) {
 				_copyfromtrack = _host.state.currenttrack;
 				_copyfrompat = id - C.Keys.PAD0;
 				_phase = 1;
-				_host.displaybumper.setMessage('CLICK AGAIN TO','CLEAR PATTERN');
+				_host.displaybumper.setMessage('CLICK AGAIN TO',
+						'CLEAR PATTERN');
 			} else if (_phase == 1) {
-				//	_copyfromtrack = _host.state.currenttrack;
-				//	_copyfrompat = id - C.Keys.PAD0;
-				//	_phase = 0;
-				//  _host.displaybumper.setMessage('PATTERN PASTED');
+				// _copyfromtrack = _host.state.currenttrack;
+				// _copyfrompat = id - C.Keys.PAD0;
+				// _phase = 0;
+				// _host.displaybumper.setMessage('PATTERN PASTED');
 				_host.displaybumper.setMessage('PATTERN CLEARED');
-				var trk = _host.song.getTrack( _copyfromtrack );
-				var pat = trk.getPattern( _copyfrompat );
+				var trk = _host.song.getTrack(_copyfromtrack);
+				var pat = trk.getPattern(_copyfrompat);
 				pat.clearSteps();
 			}
 
@@ -378,6 +379,12 @@ exports.registerScreens = function(repo) {
 	repo.push({
 		name : 'mode2',
 		factory : function() {
+			return new NewPatternsScreen2();
+		}
+	});
+	repo.push({
+		name : 'mode2',
+		factory : function() {
 			return new CopyPatternScreen();
 		}
 	});
@@ -385,12 +392,6 @@ exports.registerScreens = function(repo) {
 		name : 'mode2',
 		factory : function() {
 			return new ClearPatternScreen();
-		}
-	});
-	repo.push({
-		name : 'mode2',
-		factory : function() {
-			return new NewPatternsScreen2();
 		}
 	});
 	repo.push({

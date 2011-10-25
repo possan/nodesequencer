@@ -3,6 +3,11 @@ body {
 	font: 10pt Helvetica, Arial;
 	background-color: #000;
 	color: #fff;
+
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 a { 

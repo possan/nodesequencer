@@ -15,7 +15,6 @@ LiveNotesScreen = function() {
 			var k = id - 36;
 			if( k >= 0 && k < drumkeys.length )
 				return drumkeys[k];
-			// return "#"+id;
 		}
 		var o = Math.floor(id / 12);
 		var k = id % 12;
