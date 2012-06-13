@@ -16,10 +16,10 @@ Keys: {
 	PAD0: 0,
 	PAD15: 15,
 	
-	MODE0: 20,
-	MODE1: 21,
-	MODE2: 22,
-	MODE3: 23,
+	MODE0: 17,
+	MODE1: 18,
+	MODE2: 19,
+	MODE3: 20,
 	
 	KNOB0_UP: 30,
 	KNOB0_DN: 31,
@@ -28,7 +28,9 @@ Keys: {
 	KNOB2_UP: 34,
 	KNOB2_DN: 35,
 	KNOB3_UP: 36,
-	KNOB3_DN: 37
+	KNOB3_DN: 37,
+	KNOB4_UP: 36,
+	KNOB4_DN: 37
 	
 },
 Leds: {
@@ -36,15 +38,15 @@ Leds: {
 	PAD0: 0,
 	PAD15: 15,
 	
-	MODE0: 20,
-	MODE1: 21,
-	MODE2: 22,
-	MODE3: 23,
-	
-	BEAT0: 24,
-	BEAT1: 25,
-	BEAT2: 26,
-	BEAT3: 27
+	MODE0: 21,
+	MODE1: 22,
+	MODE2: 23,
+	MODE3: 24,
+
+	BEAT0: 17,
+	BEAT1: 18,
+	BEAT2: 19,
+	BEAT3: 20
 
 }
 };

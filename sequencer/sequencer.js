@@ -188,7 +188,7 @@ exports.Sequencer = function(opts) {
 			// console.log( 0, shufflestep, _ppqn );
 
 			if (ppqnstep == shufflestep) {
-				console.log('step at ppqn '+ppqnstep+'/'+_ppqn);
+				// console.log('step at ppqn '+ppqnstep+'/'+_ppqn);
 				// time to step everything forward
 				var rsp = stp % 16;
 				var rsp2 = stp % 128;

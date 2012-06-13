@@ -16,16 +16,24 @@ C = require('./constants').C;
 // Set up MIDI
 //
 
+console.log('Setting up MIDI...');
+
 var midi = require('midi');
 var midioutput = new midi.output();
 console.log('port count:', midioutput.getPortCount());
 console.log('port #0:', midioutput.getPortName(0)); 
 midioutput.openPort(0);
+
 //
 // Set up song and sequencer
 //
 
+console.log('Setting up Song...');
+
 var song = new songmodule.Song();
+
+console.log('Setting up Sequencer...');
+
 var seq = new sequencermodule.Sequencer( { 
 	ppqn: 48,
 	song: song,
@@ -38,6 +46,8 @@ var seq = new sequencermodule.Sequencer( {
 // Set up screens
 //
 
+console.log('Setting up Screens...');
+
 ScreenRepository.screens = [];
 
 require('./screen_notes').registerScreens( ScreenRepository.screens );
@@ -46,15 +56,6 @@ require('./screen_mix').registerScreens( ScreenRepository.screens );
 require('./screen_loop').registerScreens( ScreenRepository.screens );
 require('./screen_patterns').registerScreens( ScreenRepository.screens );
 require('./screen_trackconfig').registerScreens( ScreenRepository.screens );
-
-/*
-var dummy = devicecontrollerfactorymodule.createDeviceController({sequencer:seq});
-dummy.handleEvent( { type:'update' } );
-dummy.handleEvent( { type:'click', button:C.Keys.MODE0 } );
-dummy.handleEvent( { type:'update' } );
-dummy.handleEvent( { type:'update' } );
-dummy.handleEvent( { type:'update' } );
-*/
 
 //
 // Set up socket/http stuff
@@ -108,7 +109,7 @@ io.sockets.on('connection', function (socket) {
 
 try {
 	var com = new serialportmodule.SerialPort("/dev/tty.usbmodem411",{
-		baudrate: 9600,
+		baudrate: 115200, // 9600+,
 		parser: serialportmodule.parsers.readline("\n")
 	} );
 	console.log(com);
