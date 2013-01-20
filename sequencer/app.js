@@ -93,7 +93,7 @@ function handler (req, res) {
 
 console.log('set up webserver...');
 var app = httpmodule.createServer(handler);
-// app.listen(81);
+app.listen(81);
 
 console.log('set up ws-server...');
 var io = socketiomodule.listen(app);
@@ -108,7 +108,7 @@ io.sockets.on('connection', function (socket) {
 //
 
 try {
-	var com = new serialportmodule.SerialPort("/dev/tty.usbmodem411",{
+	var com = new serialportmodule.SerialPort("/dev/tty.usbmodem1411",{
 		baudrate: 115200, // 9600+,
 		parser: serialportmodule.parsers.readline("\n")
 	} );
