@@ -326,6 +326,7 @@ MonoSynthScreen = function() {
 
 		}
 
+		/*
 		if (id == C.Keys.KNOB1_UP) {
 			trk.gate++;
 			if (trk.gate > 127)
@@ -336,6 +337,19 @@ MonoSynthScreen = function() {
 			if (trk.gate < 1)
 				trk.gate = 1;
 		}
+		*/
+
+		if (id == C.Keys.KNOB1_DN) {
+			_step --;
+			if (_step < 0)
+				_step = 15;
+		}
+		if (id == C.Keys.KNOB1_UP) {
+			_step ++;
+			if (_step > 15)
+				_step = 0;
+		}
+
 
 		if (id == C.Keys.KNOB3_UP)
 			_host.state.currentpattern = Utils.addmod(

@@ -142,8 +142,7 @@ LoopEndScreen = function(opts) {
 		var b = Math.floor(s) % 4;
 
 		var pp = _host.sequencer.getPlayingPattern(_host.state.currenttrack);
-		var ps = _host.sequencer
-				.getPlayingPatternStep(_host.state.currenttrack);
+		var ps = _host.sequencer.getPlayingPatternStep(_host.state.currenttrack);
 
 		var strk = _host.song.getTrack(_host.state.currenttrack);
 		var sstp = strk.getPattern(_host.state.currentpattern);

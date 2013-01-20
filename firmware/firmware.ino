@@ -143,33 +143,35 @@ void setup() {
   for( int t=0; t<40; t++ ) {
     ledstate[t] = 0;
   }
-
+/*
   // flash leds #1. slide right
   for( int t=0; t<20; t++ ) {
     setLed(t,1);
     updateLeds();
-    delay(50);
+    delay(5);
     setLed(t,0);
   } 
   // flash leds #2 slide left
   for( int t=0; t<20; t++ ) {
     setLed(20-t,1);
     updateLeds();
-    delay(10);
+    delay(5);
     setLed(20-t,0);
   }
   // flash leds #2 light all
   for( int t=0; t<20; t++ ) {
     setLed(t,1);
     updateLeds();
-    delay(50);
+    delay(5);
   }
   // flash leds #2 off all
   for( int t=0; t<20; t++ ) {
     setLed(t,0);
     updateLeds();
-    delay(10);
+    delay(5);
   }
+  */
+  updateLeds();
   
   // run boot animation once 
 }

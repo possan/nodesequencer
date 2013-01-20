@@ -89,7 +89,7 @@ exports.Sequencer = function(opts) {
 			if (track < 0 || track > 15)
 				return -1;
 			var trk = _tracks[track];
-			return trk.currentStep;
+			return trk.currentStep - 1;
 		},
 
 		getPlayingPattern : function(track) {
