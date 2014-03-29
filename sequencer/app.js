@@ -117,19 +117,34 @@ io.sockets.on('connection', function (socket) {
 // Set up serialport stuff
 //
 
-try {
-	var com = new serialportmodule.SerialPort("/dev/ttyACM0",{
-		baudrate: 115200, // 9600+,
-		parser: serialportmodule.parsers.readline("\n")
-	} );
-	console.log(com);
-	// got connection, use singleton ui
-	console.log('arduino connected, mirror displays - use singleton controller');
-	devicecontrollerfactorymodule.singleton = true;
-	new arduinodevicecontrollermodule.ArduinoDeviceController( { sequencer: seq, port: com } );
-} catch(e) {
-	console.log('no arduino connected.');
-}
+var foundport = '';
+
+serialportmodule.list(function (err, ports) {
+	ports.forEach(function(port) {
+		console.log(port.comName);
+		console.log(port.pnpId);
+		console.log(port.manufacturer);
+		if (port.manufacturer.toLowerCase().indexOf('arduino') != -1) {
+			foundport = port.comName;
+			try {
+				if (foundport != '') {
+					console.log('Connecting to port: ' + foundport)
+					var com = new serialportmodule.SerialPort(foundport,{
+						baudrate: 115200, // 9600+,
+						parser: serialportmodule.parsers.readline("\n")
+					} );
+					console.log(com);
+					// got connection, use singleton ui
+					console.log('arduino connected, mirror displays - use singleton controller');
+					devicecontrollerfactorymodule.singleton = true;
+					new arduinodevicecontrollermodule.ArduinoDeviceController( { sequencer: seq, port: com } );
+				}
+			} catch(e) {
+				console.log('no arduino connected.');
+			}
+		}
+	});
+});
 
 //
 // Load song and set up autosave
