@@ -382,6 +382,9 @@ MonoSynthScreen = function() {
 	};
 
 	var _update = function() {
+		if (_host === null) return;
+		if (typeof(_host) === 'undefined') return;
+		if (typeof(_host.sequencer) === 'undefined') return;
 		var s = _host.sequencer.getPlayingGlobalStep();
 		var pp = _host.sequencer.getPlayingPattern(_host.state.currenttrack);
 		var ps = _host.sequencer

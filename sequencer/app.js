@@ -21,7 +21,8 @@ console.log('Setting up MIDI...');
 var midi = require('midi');
 var midioutput = new midi.output();
 console.log('port count:', midioutput.getPortCount());
-console.log('port #0:', midioutput.getPortName(0)); 
+for (var k=0; k<midioutput.getPortCount(); k++)
+	console.log('port #'+k+':', midioutput.getPortName(k));
 midioutput.openPort(0);
 
 //
@@ -38,6 +39,7 @@ var seq = new sequencermodule.Sequencer( {
 	ppqn: 48,
 	song: song,
 	sendMidi: function(arg) { 
+		console.log('MIDI', arg);
 		midioutput.sendMessage(arg);
 	}
 } );
