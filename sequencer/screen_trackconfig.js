@@ -34,8 +34,8 @@ TrackConfigScreen = function() {
 			}
 		}
 		else  if( _par == 1 ) {
-			if( id == C.Keys.KNOB1_UP ) strk.channel = Utils.addclamp( strk.channel, 1, 0, 15 );
-			if( id == C.Keys.KNOB1_DN ) strk.channel = Utils.addclamp( strk.channel, -1, 0, 15 );
+			if( id == C.Keys.KNOB1_UP ) strk.channel = Utils.addclamp( strk.channel, 1, 0, 127 );
+			if( id == C.Keys.KNOB1_DN ) strk.channel = Utils.addclamp( strk.channel, -1, 0, 127 );
 		}
 		else  if( _par == 2 ) {
 			if( id == C.Keys.KNOB1_UP ) strk.gate = Utils.addclamp( strk.gate, 1, 0, 127 );

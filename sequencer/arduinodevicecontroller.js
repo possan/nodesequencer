@@ -56,6 +56,8 @@ exports.ArduinoDeviceController = function( opts ) {
 
 	var _port = opts.port || null;
 	var _seq = opts.sequencer || null;	
+
+	_port.on('open', function() {
 	
 	var lastscreen = ['','','',''];
 	
@@ -127,6 +129,7 @@ exports.ArduinoDeviceController = function( opts ) {
 	} );
 
 	_port.write('C\n');
+	});
 };
 
 

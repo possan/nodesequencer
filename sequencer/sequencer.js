@@ -50,8 +50,8 @@ exports.Sequencer = function(opts) {
 				if (_runningnotes[j].timer <= 0) {
 					// console.log('stopping note '+_runningnotes[j].note+' on
 					// channel '+_runningnotes[j].chan);
-					_midiout([ 0x80 + _runningnotes[j].chan,
-							_runningnotes[j].note, 0 ]);
+					_midiout([ 0x80 + (_runningnotes[j].chan & 0xF),
+							_runningnotes[j].note, 0 ], _runningnotes[j].chan >> 4);
 					_runningnotes.splice(j, 1);
 				}
 			}
@@ -59,7 +59,7 @@ exports.Sequencer = function(opts) {
 
 		queueNote : function(chan, note, vel, stepsdur) {
 			// console.log('starting note '+note+' on channel '+chan);
-			_midiout([ 0x90 + chan, note, vel ]);
+			_midiout([ 0x90 + (chan & 0xF), note, vel ], chan >> 4);
 			_runningnotes.push({
 				chan : chan,
 				note : note,

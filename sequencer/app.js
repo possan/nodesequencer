@@ -20,10 +20,16 @@ console.log('Setting up MIDI...');
 
 var midi = require('midi');
 var midioutput = new midi.output();
+// var midioutput2 = new midi.output();
+var midioutputs = [];
 console.log('port count:', midioutput.getPortCount());
 for (var k=0; k<midioutput.getPortCount(); k++)
 	console.log('port #'+k+':', midioutput.getPortName(k));
-midioutput.openPort(0);
+	try {
+		midioutputs.push(midioutput.openPort(k));
+	} catch(e) {
+		console.log('Failed to open port.');
+	}
 
 //
 // Set up song and sequencer
@@ -35,12 +41,14 @@ var song = new songmodule.Song();
 
 console.log('Setting up Sequencer...');
 
-var seq = new sequencermodule.Sequencer( { 
+var seq = new sequencermodule.Sequencer( {
 	ppqn: 48,
 	song: song,
-	sendMidi: function(arg) { 
-		console.log('MIDI', arg);
-		midioutput.sendMessage(arg);
+	sendMidi: function(arg, device) {
+		console.log('MIDI', arg, device);
+		if (typeof(midioutputs[device]) != 'undefined') {
+			midioutputs[device].sendMessage(arg);
+		}
 	}
 } );
 
@@ -95,7 +103,7 @@ function handler (req, res) {
 
 console.log('set up webserver...');
 var app = httpmodule.createServer(handler);
-app.listen(81);
+app.listen(8000);
 
 console.log('set up ws-server...');
 var io = socketiomodule.listen(app);
@@ -110,7 +118,7 @@ io.sockets.on('connection', function (socket) {
 //
 
 try {
-	var com = new serialportmodule.SerialPort("/dev/tty.usbmodem1411",{
+	var com = new serialportmodule.SerialPort("/dev/ttyACM0",{
 		baudrate: 115200, // 9600+,
 		parser: serialportmodule.parsers.readline("\n")
 	} );
@@ -170,6 +178,7 @@ seq.player = playermodule.Player( {
 } );
 
 console.log('starting playback.');
+
 seq.player.startTimer();
 
 console.log( 'App initialized, listening for connections ... ' ); 
